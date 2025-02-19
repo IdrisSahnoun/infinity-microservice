@@ -1,13 +1,13 @@
-package tn.esprit.microservice2;
+package tn.esprit.microservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Microservice2Application {
+public class MicroserviceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Microservice2Application.class, args);
+		SpringApplication.run(MicroserviceApplication.class, args);
 	}
 
 }
