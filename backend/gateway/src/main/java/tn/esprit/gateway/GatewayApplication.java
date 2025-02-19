@@ -18,6 +18,7 @@ public class GatewayApplication {
 	public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
 		return builder.routes()
 				.route("microservice1", r-> r.path("/candidat/**").uri("lb://microservice1")).
+				 route("microservice2", r-> r.path("/membre/**").uri("lb://microservice2")).
 				build();
 	}
 }
