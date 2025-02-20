@@ -14,6 +14,7 @@ public class GatewayApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(GatewayApplication.class, args);
 	}
+
 	@Bean
 	public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
 		return builder.routes()
@@ -21,6 +22,9 @@ public class GatewayApplication {
 				.route("microservice5", r-> r.path("/abonnements/**").uri("lb://microservice5")).
 				 route("microservice2", r-> r.path("/membre/**").uri("lb://microservice2"))
 				.route("microservice", r-> r.path("/competition/**").uri("lb://microservice")).
+				.route("microservice4", r -> r.path("/plans/**")
+						.uri("lb://microservice4")) // Ajout du microservice4
 				build();
 	}
 }
+
