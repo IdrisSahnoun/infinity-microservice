@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/plans")
+@RequestMapping("")
 @RequiredArgsConstructor // Injection de dépendances via constructeur
 public class PlanEntrainementController {
 

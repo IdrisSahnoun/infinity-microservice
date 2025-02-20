@@ -24,7 +24,7 @@ public class GatewayApplication {
 						.uri("lb://microservice2"))
 				.route("microservice3", r -> r.path("/competition/**")
 						.uri("lb://microservice3"))
-				.route("microservice4", r -> r.path("/plan-entrainement/**")
+				.route("microservice4", r -> r.path("/plans/**")
 						.uri("lb://microservice4")) // Ajout du microservice4
 				.build();
 	}
