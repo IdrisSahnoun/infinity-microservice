@@ -18,15 +18,13 @@ public class GatewayApplication {
 	@Bean
 	public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
 		return builder.routes()
-				.route("microservice1", r -> r.path("/candidat/**")
-						.uri("lb://microservice1"))
-				.route("microservice2", r -> r.path("/membre/**")
-						.uri("lb://microservice2"))
-				.route("microservice3", r -> r.path("/competition/**")
-						.uri("lb://microservice3"))
+				.route("microservice1", r-> r.path("/candidat/**").uri("lb://microservice1"))
+				.route("microservice5", r-> r.path("/abonnements/**").uri("lb://microservice5")).
+				 route("microservice2", r-> r.path("/membre/**").uri("lb://microservice2"))
+				.route("microservice", r-> r.path("/competition/**").uri("lb://microservice")).
 				.route("microservice4", r -> r.path("/plans/**")
 						.uri("lb://microservice4")) // Ajout du microservice4
-				.build();
+				build();
 	}
 }
 
