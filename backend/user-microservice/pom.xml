@@ -9,13 +9,25 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>tn.esprit</groupId>
-    <artifactId>tpFoyer-17</artifactId>
+    <artifactId>user-microservice</artifactId>
     <version>1.0.0-release</version>
-    <name>tpFoyer-17</name>
-    <description>tpFoyer-17</description>
+    <name>user-microservice</name>
+    <description>user-microservice</description>
     <properties>
         <java.version>17</java.version>
+        <spring-cloud.version>2022.0.4</spring-cloud.version>
     </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <dependencies>
         <!-- Spring Security -->
         <dependency>
@@ -69,6 +81,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
     </dependencies>
     <distributionManagement>

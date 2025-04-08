@@ -11,8 +11,8 @@
 	<groupId>esprit</groupId>
 	<artifactId>microservice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>microservice</name>
-	<description>microservice</description>
+	<name>microservice1</name>
+	<description>microservice1</description>
 	<url/>
 	<licenses>
 		<license/>

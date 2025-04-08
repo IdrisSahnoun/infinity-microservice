@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
         <module name="microservice (1)" />
+        <module name="microservice (2)" />
         <module name="eureka" />
         <module name="microservice" />
         <module name="tpFoyer-17" />
@@ -34,6 +35,7 @@
       <module name="gateway" options="-parameters" />
       <module name="microservice" options="-parameters" />
       <module name="microservice (1)" options="-parameters" />
+      <module name="microservice (2)" options="-parameters" />
       <module name="microservice2" options="-parameters" />
       <module name="microservice3" options="-parameters" />
       <module name="microservice4" options="-parameters" />
