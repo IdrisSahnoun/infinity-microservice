@@ -1,10 +1,11 @@
-C:\Users\ayari\Desktop\C-Esprit\S2\Applications web distribuées__4SAE7\final\infinity-microservice\backend\user-microservice\src\main\java\tn\esprit\tpfoyer17\services\auth\CustomUserDetailsService.java
-C:\Users\ayari\Desktop\C-Esprit\S2\Applications web distribuées__4SAE7\final\infinity-microservice\backend\user-microservice\src\main\java\tn\esprit\tpfoyer17\services\auth\SecurityConfig.java
-C:\Users\ayari\Desktop\C-Esprit\S2\Applications web distribuées__4SAE7\final\infinity-microservice\backend\user-microservice\src\main\java\tn\esprit\tpfoyer17\controllers\AuthController.java
-C:\Users\ayari\Desktop\C-Esprit\S2\Applications web distribuées__4SAE7\final\infinity-microservice\backend\user-microservice\src\main\java\tn\esprit\tpfoyer17\entities\User.java
-C:\Users\ayari\Desktop\C-Esprit\S2\Applications web distribuées__4SAE7\final\infinity-microservice\backend\user-microservice\src\main\java\tn\esprit\tpfoyer17\configurations\AOPConfig.java
-C:\Users\ayari\Desktop\C-Esprit\S2\Applications web distribuées__4SAE7\final\infinity-microservice\backend\user-microservice\src\main\java\tn\esprit\tpfoyer17\services\auth\JwtUtils.java
-C:\Users\ayari\Desktop\C-Esprit\S2\Applications web distribuées__4SAE7\final\infinity-microservice\backend\user-microservice\src\main\java\tn\esprit\tpfoyer17\configurations\SpringDocConfig.java
-C:\Users\ayari\Desktop\C-Esprit\S2\Applications web distribuées__4SAE7\final\infinity-microservice\backend\user-microservice\src\main\java\tn\esprit\tpfoyer17\services\auth\JwtAuthenticationFilter.java
-C:\Users\ayari\Desktop\C-Esprit\S2\Applications web distribuées__4SAE7\final\infinity-microservice\backend\user-microservice\src\main\java\tn\esprit\tpfoyer17\repositories\UserRepository.java
-C:\Users\ayari\Desktop\C-Esprit\S2\Applications web distribuées__4SAE7\final\infinity-microservice\backend\user-microservice\src\main\java\tn\esprit\tpfoyer17\TpFoyer17Application.java
+C:\Users\ayari\Desktop\infinity_gym_FINAL\infinity-microservice\backend\user-microservice\src\main\java\com\datmt\keycloak\springbootauth\http\requests\LoginRequest.java
+C:\Users\ayari\Desktop\infinity_gym_FINAL\infinity-microservice\backend\user-microservice\src\main\java\com\datmt\keycloak\springbootauth\config\KeycloakProvider.java
+C:\Users\ayari\Desktop\infinity_gym_FINAL\infinity-microservice\backend\user-microservice\src\main\java\com\datmt\keycloak\springbootauth\config\KeycloakResolverConfig.java
+C:\Users\ayari\Desktop\infinity_gym_FINAL\infinity-microservice\backend\user-microservice\src\main\java\com\datmt\keycloak\springbootauth\controller\UserController.java
+C:\Users\ayari\Desktop\infinity_gym_FINAL\infinity-microservice\backend\user-microservice\src\main\java\com\datmt\keycloak\springbootauth\controller\HelloController.java
+C:\Users\ayari\Desktop\infinity_gym_FINAL\infinity-microservice\backend\user-microservice\src\main\java\com\datmt\keycloak\springbootauth\service\KeycloakAdminClientService.java
+C:\Users\ayari\Desktop\infinity_gym_FINAL\infinity-microservice\backend\user-microservice\src\main\java\com\datmt\keycloak\springbootauth\http\requests\CreateUserRequest.java
+C:\Users\ayari\Desktop\infinity_gym_FINAL\infinity-microservice\backend\user-microservice\src\main\java\com\datmt\keycloak\springbootauth\config\KeycloakSecurityConfig.java
+C:\Users\ayari\Desktop\infinity_gym_FINAL\infinity-microservice\backend\user-microservice\src\main\java\com\datmt\keycloak\springbootauth\KeycloakSpringbootAuth.java
+C:\Users\ayari\Desktop\infinity_gym_FINAL\infinity-microservice\backend\user-microservice\src\main\java\com\datmt\keycloak\springbootauth\http\requests\User.java
+C:\Users\ayari\Desktop\infinity_gym_FINAL\infinity-microservice\backend\user-microservice\src\main\java\com\datmt\keycloak\springbootauth\repository\UserRepository.java

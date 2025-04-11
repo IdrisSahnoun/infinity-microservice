@@ -11,7 +11,7 @@ import tn.esprit.microservice1.services.SalleDeSportService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/salles")
+@RequestMapping("/mic1/salles")
 public class SalleDeSportController {
     
     private final SalleDeSportService salleDeSportService;

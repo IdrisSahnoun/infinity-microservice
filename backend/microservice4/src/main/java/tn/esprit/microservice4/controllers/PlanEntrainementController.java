@@ -4,7 +4,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.microservice4.entities.PlanEntrainement;
+import tn.esprit.microservice4.entities.Progression;
 import tn.esprit.microservice4.services.PlanEntrainementService;
+import tn.esprit.microservice4.services.ProgressionService;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,6 +18,27 @@ public class PlanEntrainementController {
 
     @Autowired
     private PlanEntrainementService planEntrainementService;
+
+
+
+    @Autowired
+    private ProgressionService progressionService;
+
+    @PostMapping("/demarrer/{userId}/{planId}")
+    public Progression demarrerPlan(@PathVariable int userId, @PathVariable int planId) {
+        return progressionService.demarrerPlan(userId, planId);
+    }
+
+    @PutMapping("/marquer-seance-terminee/{progressionId}")
+    public void marquerSeanceTerminee(@PathVariable int progressionId) {
+        progressionService.marquerSeanceTerminee(progressionId);
+    }
+
+    @GetMapping("/{progressionId}")
+    public Progression obtenirProgression(@PathVariable int progressionId) {
+        return progressionService.obtenirProgression(progressionId);
+    }
+
 
     // Ajouter un plan d'entraînement
     @PostMapping("/add")
