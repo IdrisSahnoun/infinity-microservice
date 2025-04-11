@@ -83,6 +83,7 @@
     "Maven.microservice5 [install].executor": "Run",
     "Maven.tpFoyer-17 [clean].executor": "Run",
     "Maven.tpFoyer-17 [install].executor": "Run",
+    "Python.routes.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -99,13 +100,17 @@
     "git-widget-placeholder": "microservice3-ayoub",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ayari/Desktop/C-Esprit/S2/Applications web distribuées__4SAE7/Project_Validation/infinity-microservice/backend/config-server/src/main/resources/config",
+    "last_opened_file_path": "C:/Users/pc/Desktop/micro/infinity-microservice/backend",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
