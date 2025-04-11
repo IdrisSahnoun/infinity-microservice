@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 tn\esprit\tpfoyer17\repositories\EtudiantRepository.class
 tn\esprit\tpfoyer17\controllers\ReservationController.class
 tn\esprit\tpfoyer17\entities\Bloc$BlocBuilder.class
@@ -46,3 +47,16 @@ tn\esprit\tpfoyer17\entities\Chambre$ChambreBuilder.class
 tn\esprit\tpfoyer17\services\ReservationService.class
 tn\esprit\tpfoyer17\controllers\EtudiantController.class
 tn\esprit\tpfoyer17\services\auth\SecurityConfig.class
+=======
+com\datmt\keycloak\springbootauth\config\KeycloakSecurityConfig.class
+com\datmt\keycloak\springbootauth\repository\UserRepository.class
+com\datmt\keycloak\springbootauth\config\KeycloakResolverConfig.class
+com\datmt\keycloak\springbootauth\http\requests\LoginRequest.class
+com\datmt\keycloak\springbootauth\KeycloakSpringbootAuth.class
+com\datmt\keycloak\springbootauth\http\requests\CreateUserRequest.class
+com\datmt\keycloak\springbootauth\controller\UserController.class
+com\datmt\keycloak\springbootauth\config\KeycloakProvider.class
+com\datmt\keycloak\springbootauth\controller\HelloController.class
+com\datmt\keycloak\springbootauth\http\requests\User.class
+com\datmt\keycloak\springbootauth\service\KeycloakAdminClientService.class
+>>>>>>> Stashed changes
