@@ -4,14 +4,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import tn.esprit.microservice3.Model.DietRecommendation;
 import tn.esprit.microservice3.Model.Food;
+import tn.esprit.microservice3.Model.ImcRequest;
 import tn.esprit.microservice3.Service.FoodService;
 
 import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/foods")
+@RequestMapping("/mic3/food")
 public class FoodController {
 
     @Autowired
@@ -57,5 +59,17 @@ public class FoodController {
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+    }
+
+    @PostMapping("/diet-recommendation")
+    public ResponseEntity<DietRecommendation> getDietRecommendation(@RequestBody ImcRequest request) {
+        DietRecommendation recommendation = foodService.getDietRecommendation(request);
+        return new ResponseEntity<>(recommendation, HttpStatus.OK);
+    }
+
+    @PostMapping("/bulk")
+    public ResponseEntity<List<Food>> createFoods(@RequestBody List<Food> foods) {
+        List<Food> savedFoods = foodService.saveAllFoods(foods);
+        return new ResponseEntity<>(savedFoods, HttpStatus.CREATED);
     }
 }
