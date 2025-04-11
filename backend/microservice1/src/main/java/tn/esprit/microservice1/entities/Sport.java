@@ -19,6 +19,12 @@ public class Sport {
     private Integer codeSport;
     
     private String nom;
+    private String description;
+    private String niveauDifficulte; // Débutant, Intermédiaire, Avancé
+    private Integer dureeMoyenne; // en minutes
+    private Double prixAbonnementMensuel;
+    private String equipementNecessaire;
+    private String imageUrl;
     
     @JsonIgnore
     @ManyToMany(mappedBy = "sports")
