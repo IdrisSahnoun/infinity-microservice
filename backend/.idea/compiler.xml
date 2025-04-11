@@ -14,6 +14,7 @@
         <module name="tpFoyer-17" />
         <module name="microservice2" />
         <module name="gateway" />
+        <module name="user-microservice" />
       </profile>
       <profile name="Annotation profile for microservice5" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -41,6 +42,7 @@
       <module name="microservice4" options="-parameters" />
       <module name="microservice5" options="-parameters" />
       <module name="tpFoyer-17" options="-parameters" />
+      <module name="user-microservice" options="-parameters" />
     </option>
   </component>
 </project>
