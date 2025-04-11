@@ -69,8 +69,8 @@ infinity-gym/
 ├── member-service/
 ├── gym-service/
 ├── nutrition-service/
-├── api-gateway/ (if applicable)
-└── eureka-server/ (if applicable)
+├── api-gateway/ 
+└── eureka-server/ 
 ```
 
 ## **Contributing** 🤝
