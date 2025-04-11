@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afd91bf4-2328-4c66-b57b-11519fad4bc9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+    <list default="true" id="afd91bf4-2328-4c66-b57b-11519fad4bc9" name="Changes" comment="class init">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/config/microservice3.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/config/microservice3.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/tn/esprit/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/tn/esprit/gateway/GatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice3/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice3/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice3/src/main/java/tn/esprit/microservice3/Model/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice3/src/main/java/tn/esprit/microservice3/Model/Food.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice3/src/main/java/tn/esprit/microservice3/Rest/FoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice3/src/main/java/tn/esprit/microservice3/Rest/FoodController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice3/src/main/java/tn/esprit/microservice3/Service/FoodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice3/src/main/java/tn/esprit/microservice3/Service/FoodService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice3/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservice3/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +30,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -31,12 +43,12 @@
     &quot;assignee&quot;: &quot;iitsMahdi&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/IdrisSahnoun/infinity-microservice.git",
-    "accountId": "54f640ae-01bc-4061-837f-520686531603"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/IdrisSahnoun/infinity-microservice.git&quot;,
+    &quot;accountId&quot;: &quot;54f640ae-01bc-4061-837f-520686531603&quot;
   }
-}]]></component>
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -54,6 +66,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "HTTP Request.Microservice3Application | #1.executor": "Run",
     "Maven.eureka [clean].executor": "Run",
     "Maven.eureka [install].executor": "Run",
     "Maven.gateway [clean].executor": "Run",
@@ -80,8 +93,10 @@
     "Spring Boot.ConfigServerApplication.executor": "Run",
     "Spring Boot.EurekaApplication.executor": "Run",
     "Spring Boot.GatewayApplication.executor": "Run",
+    "Spring Boot.Microservice3Application.executor": "Run",
+    "Spring Boot.Microservice5Application.executor": "Run",
     "Spring Boot.TpFoyer17Application.executor": "Run",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "microservice3-ayoub",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/ayari/Desktop/C-Esprit/S2/Applications web distribuées__4SAE7/Project_Validation/infinity-microservice/backend/config-server/src/main/resources/config",
@@ -108,8 +123,16 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
+    <option name="excludedTypes">
+      <set>
+        <option value="HttpClient.HttpRequestRunConfigurationType" />
+      </set>
+    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.MicroserviceApplication">
+    <configuration name="Microservice3Application | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/Microservice3Application.http" executionIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="config-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="esprit.configserver.ConfigServerApplication" />
@@ -183,6 +206,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.Microservice3Application | #1" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -203,11 +231,25 @@
       <workItem from="1739449256591" duration="402000" />
       <workItem from="1744032680789" duration="4419000" />
       <workItem from="1744116449106" duration="711000" />
-      <workItem from="1744400439300" duration="1950000" />
+      <workItem from="1744400439300" duration="6199000" />
+      <workItem from="1744406673515" duration="5018000" />
     </task>
+    <task id="LOCAL-00001" summary="class init">
+      <option name="closed" value="true" />
+      <created>1744402518414</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1744402518414</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="class init" />
+    <option name="LAST_COMMIT_MESSAGE" value="class init" />
   </component>
 </project>

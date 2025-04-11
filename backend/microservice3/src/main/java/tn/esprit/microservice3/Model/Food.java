@@ -26,5 +26,4 @@ public class Food {
     private Double fat;
     private Double serving_size;
     private String serving_unit;
-
 }

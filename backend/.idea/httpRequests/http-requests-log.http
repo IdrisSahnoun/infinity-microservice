@@ -1,0 +1,18 @@
+GET http://localhost:8090/mic5/food
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-11T222325.404.json
+
+###
+
+GET http://localhost:8090/mic5/food
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-11T222313.404.json
+
+###
+
