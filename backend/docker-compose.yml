@@ -1,0 +1,96 @@
+
+services:
+  eureka:
+    build: ./eureka
+    image:  amenizoubeir/backend-eureka:latest
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    networks:
+      - microservices-network
+
+  gateway:
+    build: ./gateway
+    image:  amenizoubeir/backend-gateway:latest
+    container_name: gateway-service
+    ports:
+      - "8088:8088"
+    depends_on:
+      - eureka
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka/
+    networks:
+      - microservices-network
+
+  microservice-service:
+    build: ./microservice
+    image:  idrissahnoun/backend-microservice-service:latest
+    container_name: microservice-idris-service
+    ports:
+      - "8082:8082"
+    depends_on:
+      - eureka
+      - gateway
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka/
+    networks:
+      - microservices-network
+
+  microservice1-service:
+    build: ./microservice1
+    image:  tahanaat/backend-microservice1-service:latest
+    container_name: microservice1-taha-service
+    ports:
+      - "8081:8081"
+    depends_on:
+      - eureka
+      - gateway
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka/
+    networks:
+      - microservices-network
+
+  microservice5-service:
+    build: ./microservice5
+    image:  hedyhelioui/backend-microservice5-service:latest
+    container_name: microservice5-hedy-service
+    ports:
+      - "8085:8085"
+    depends_on:
+      - eureka
+      - gateway
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka/
+    networks:
+      - microservices-network
+
+  microservice2-service:
+    build: ./microservice2
+    image:  mahdiayari/backend-microservice2-service:latest
+    container_name: microservice2-mahdi-service
+    ports:
+      - "8082:8082"
+    depends_on:
+      - eureka
+      - gateway
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka/
+    networks:
+      - microservices-network
+
+  microservice3-service:
+    build: ./microservice3
+    image:  ayoubtouti/backend-microservice3-service:latest
+    container_name: microservice3-ayoub-service
+    ports:
+      - "8090:8090"
+    depends_on:
+      - eureka
+      - gateway
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka/
+    networks:
+      - microservices-network
+networks:
+  microservices-network:
+    driver: bridge
