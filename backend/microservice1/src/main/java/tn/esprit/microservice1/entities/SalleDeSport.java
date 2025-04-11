@@ -18,7 +18,21 @@ public class SalleDeSport {
     private Integer id;
     
     private String nom;
+    private String adresse;
+    private String ville;
+    private String codePostal;
+    private String telephone;
+    private String email;
+    private String siteWeb;
     private Integer capacite;
+    private Double superficie; // en m²
+    private String horairesOuverture;
+    private String description;
+    private String imageUrl;
+    private Double prixMoyenAbonnement;
+    private Boolean parkingDisponible;
+    private Boolean vestiairesDisponibles;
+    private Boolean douchesDisponibles;
     
     @ManyToMany
     @JoinTable(
