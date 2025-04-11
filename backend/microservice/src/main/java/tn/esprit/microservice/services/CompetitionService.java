@@ -1,10 +1,13 @@
 package tn.esprit.microservice.services;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import tn.esprit.microservice.entities.Competition;
 import tn.esprit.microservice.repositories.CompetitionRepository;
+import tn.esprit.microservice.specifications.CompetitionSpecification;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -46,5 +49,11 @@ public class CompetitionService implements ICompetitionService {
     // Delete a competition
     public void deleteCompetition(Long id) {
         competitionRepository.deleteById(id);
+    }
+    public List<Competition> searchCompetitions(String name, LocalDateTime startDate, LocalDateTime endDate, String location) {
+        Specification<Competition> spec = Specification.where(CompetitionSpecification.hasName(name))
+                .and(CompetitionSpecification.isInDateRange(startDate, endDate))
+                .and(CompetitionSpecification.hasLocation(location));
+        return competitionRepository.findAll(spec);
     }
 }
