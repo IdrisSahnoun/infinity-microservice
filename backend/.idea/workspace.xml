@@ -4,67 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< Updated upstream
-    <list default="true" id="afd91bf4-2328-4c66-b57b-11519fad4bc9" name="Changes" comment="" />
-=======
     <list default="true" id="afd91bf4-2328-4c66-b57b-11519fad4bc9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/config/microservice2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/config/microservice2.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/config/user-microservice.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/config/user-microservice.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/tn/esprit/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/tn/esprit/gateway/GatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice1/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservice1/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice2/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice2/src/main/java/tn/esprit/microservice/controllers/MembreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice2/src/main/java/tn/esprit/microservice/controllers/StockItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice2/src/main/java/tn/esprit/microservice/entities/Membre.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice2/src/main/java/tn/esprit/microservice/entities/StockItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice2/src/main/java/tn/esprit/microservice/repositories/MembreRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice2/src/main/java/tn/esprit/microservice/services/MembreService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-microservice/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-microservice/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-microservice/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/src/main/java/tn/esprit/tpfoyer17/TpFoyer17Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/src/main/java/tn/esprit/tpfoyer17/configurations/AOPConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/src/main/java/tn/esprit/tpfoyer17/configurations/SpringDocConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/src/main/java/tn/esprit/tpfoyer17/controllers/AuthController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/src/main/java/tn/esprit/tpfoyer17/entities/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/src/main/java/tn/esprit/tpfoyer17/repositories/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/src/main/java/tn/esprit/tpfoyer17/services/auth/CustomUserDetailsService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/src/main/java/tn/esprit/tpfoyer17/services/auth/JwtAuthenticationFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/src/main/java/tn/esprit/tpfoyer17/services/auth/JwtUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/src/main/java/tn/esprit/tpfoyer17/services/auth/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-microservice/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/src/test/java/tn/esprit/tpfoyer17/TpFoyer17ApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-microservice/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/classes/tn/esprit/tpfoyer17/TpFoyer17Application.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/classes/tn/esprit/tpfoyer17/configurations/AOPConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/classes/tn/esprit/tpfoyer17/configurations/SpringDocConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/classes/tn/esprit/tpfoyer17/controllers/AuthController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/classes/tn/esprit/tpfoyer17/entities/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/classes/tn/esprit/tpfoyer17/repositories/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/classes/tn/esprit/tpfoyer17/services/auth/CustomUserDetailsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/classes/tn/esprit/tpfoyer17/services/auth/JwtAuthenticationFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/classes/tn/esprit/tpfoyer17/services/auth/JwtUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/classes/tn/esprit/tpfoyer17/services/auth/SecurityConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/user-microservice/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/user-microservice/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/surefire-reports/TEST-tn.esprit.tpfoyer17.TpFoyer17ApplicationTests.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/surefire-reports/tn.esprit.tpfoyer17.TpFoyer17ApplicationTests.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/test-classes/tn/esprit/tpfoyer17/TpFoyer17ApplicationTests.class" beforeDir="false" />
     </list>
->>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-<<<<<<< Updated upstream
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
-=======
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -82,12 +31,12 @@
     &quot;assignee&quot;: &quot;iitsMahdi&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/IdrisSahnoun/infinity-microservice.git&quot;,
-    &quot;accountId&quot;: &quot;99960faa-173e-4a98-8292-19f4149adc12&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/IdrisSahnoun/infinity-microservice.git",
+    "accountId": "54f640ae-01bc-4061-837f-520686531603"
   }
-}</component>
+}]]></component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -95,7 +44,6 @@
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
->>>>>>> Stashed changes
   <component name="ProjectId" id="2szCwL5dXd7MmQDjU6GvmNHcTrs" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -106,13 +54,6 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-<<<<<<< Updated upstream
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-=======
-    "Application.KeycloakSpringbootAuth.executor": "Run",
-    "Application.MicroserviceApplication.executor": "Run",
-    "Maven.User_microservice [clean].executor": "Run",
-    "Maven.User_microservice [install].executor": "Run",
     "Maven.eureka [clean].executor": "Run",
     "Maven.eureka [install].executor": "Run",
     "Maven.gateway [clean].executor": "Run",
@@ -129,32 +70,30 @@
     "Maven.microservice5 [install].executor": "Run",
     "Maven.tpFoyer-17 [clean].executor": "Run",
     "Maven.tpFoyer-17 [install].executor": "Run",
-    "Maven.user-microservice [clean].executor": "Run",
-    "Maven.user-microservice [install].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.ConfigServerApplication.executor": "Run",
     "Spring Boot.EurekaApplication.executor": "Run",
     "Spring Boot.GatewayApplication.executor": "Run",
-    "Spring Boot.KeycloakSpringbootAuth.executor": "Run",
     "Spring Boot.TpFoyer17Application.executor": "Run",
     "git-widget-placeholder": "main",
->>>>>>> Stashed changes
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/ayari/Desktop/C-Esprit/S2/Applications web distribuées__4SAE7/Project_Validation/infinity-microservice/backend/config-server/src/main/resources/config",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-<<<<<<< Updated upstream
-=======
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ayari\Desktop\C-Esprit\S2\Applications web distribuées__4SAE7\Project_Validation\infinity-microservice\backend\config-server\src\main\resources\config" />
@@ -170,33 +109,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MicroserviceApplication">
-    <configuration name="KeycloakSpringbootAuth" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.datmt.keycloak.springbootauth.KeycloakSpringbootAuth" />
-      <module name="User_microservice" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.datmt.keycloak.springbootauth.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MicroserviceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="tn.esprit.microservice.MicroserviceApplication" />
-      <module name="microservice2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tn.esprit.microservice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.MicroserviceApplication">
     <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="config-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="esprit.configserver.ConfigServerApplication" />
@@ -214,14 +127,6 @@
     <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.gateway.GatewayApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="KeycloakSpringbootAuth" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="User_microservice" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.datmt.keycloak.springbootauth.KeycloakSpringbootAuth" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -278,19 +183,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.MicroserviceApplication" />
-        <item itemvalue="Application.KeycloakSpringbootAuth" />
-      </list>
-    </recent_temporary>
   </component>
->>>>>>> Stashed changes
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
       </set>
     </attachedChunks>
   </component>
@@ -303,14 +201,9 @@
       <option name="presentableId" value="Default" />
       <updated>1739449256270</updated>
       <workItem from="1739449256591" duration="402000" />
-<<<<<<< Updated upstream
-=======
       <workItem from="1744032680789" duration="4419000" />
       <workItem from="1744116449106" duration="711000" />
-      <workItem from="1744315565772" duration="3820000" />
-      <workItem from="1744405812342" duration="72000" />
-      <workItem from="1744405902548" duration="4247000" />
->>>>>>> Stashed changes
+      <workItem from="1744400439300" duration="1950000" />
     </task>
     <servers />
   </component>
