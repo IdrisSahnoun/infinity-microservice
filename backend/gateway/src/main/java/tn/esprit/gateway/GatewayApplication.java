@@ -6,6 +6,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.reactive.CorsWebFilter;
+import org.springframework.web.cors.reactive.UrlBasedCorsConfigurationSource;
 
 @SpringBootApplication
 @EnableDiscoveryClient
@@ -25,7 +28,22 @@ public class GatewayApplication {
 				.route("microservice1", r-> r.path("/mic1/**").uri("lb://microservice1"))
 				.route("microservice4", r -> r.path("/plans/**").uri("lb://microservice4"))
 				.route("user-microservice", r -> r.path("/auth/**").uri("lb://user-microservice"))
+				
 				.build();
+	}
+
+	@Bean
+	public CorsWebFilter corsWebFilter() {
+		CorsConfiguration config = new CorsConfiguration();
+		config.addAllowedOrigin("http://localhost:4200");  // ton frontend
+		config.addAllowedMethod("*");                    // GET, POST, PUT, DELETE…
+		config.addAllowedHeader("*");                    // tous les headers
+		config.setAllowCredentials(true);                // si tu utilises les cookies
+
+		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+		source.registerCorsConfiguration("/**", config);
+
+		return new CorsWebFilter(source);
 	}
 }
 

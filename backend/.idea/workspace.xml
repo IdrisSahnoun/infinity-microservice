@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afd91bf4-2328-4c66-b57b-11519fad4bc9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/target/classes/config/microservice.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/target/classes/config/microservice.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/target/classes/config/microservice1.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/target/classes/config/microservice1.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/target/classes/config/microservice2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/target/classes/config/microservice2.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/target/classes/config/microservice3.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/target/classes/config/microservice3.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/target/classes/config/microservice4.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/target/classes/config/microservice4.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/target/classes/config/microservice5.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/target/classes/config/microservice5.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/target/classes/config/user-microservice.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/target/classes/config/user-microservice.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/tn/esprit/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/tn/esprit/gateway/GatewayApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,12 +37,12 @@
     &quot;assignee&quot;: &quot;iitsMahdi&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/IdrisSahnoun/infinity-microservice.git",
-    "accountId": "54f640ae-01bc-4061-837f-520686531603"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/IdrisSahnoun/infinity-microservice.git&quot;,
+    &quot;accountId&quot;: &quot;99960faa-173e-4a98-8292-19f4149adc12&quot;
   }
-}]]></component>
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -54,6 +60,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.ConfigServerApplication.executor": "Run",
+    "Application.MicroserviceApplication.executor": "Run",
+    "HTTP Request.generated-requests | #10.executor": "Run",
     "Maven.eureka [clean].executor": "Run",
     "Maven.eureka [install].executor": "Run",
     "Maven.gateway [clean].executor": "Run",
@@ -80,8 +89,9 @@
     "Spring Boot.ConfigServerApplication.executor": "Run",
     "Spring Boot.EurekaApplication.executor": "Run",
     "Spring Boot.GatewayApplication.executor": "Run",
+    "Spring Boot.MicroserviceApplication.executor": "Run",
     "Spring Boot.TpFoyer17Application.executor": "Run",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "microservice2-mahdi",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/ayari/Desktop/C-Esprit/S2/Applications web distribuées__4SAE7/Project_Validation/infinity-microservice/backend/config-server/src/main/resources/config",
@@ -109,7 +119,36 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MicroserviceApplication">
+  <component name="RunManager" selected="HTTP Request.generated-requests | #10">
+    <configuration name="ConfigServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="esprit.configserver.ConfigServerApplication" />
+      <module name="config-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="esprit.configserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MicroserviceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="tn.esprit.microservice.MicroserviceApplication" />
+      <module name="microservice2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tn.esprit.microservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="generated-requests | #10" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="10" requestIdentifier="#10" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="config-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="esprit.configserver.ConfigServerApplication" />
@@ -183,12 +222,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.generated-requests | #10" />
+        <item itemvalue="Application.MicroserviceApplication" />
+        <item itemvalue="Application.ConfigServerApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
       </set>
     </attachedChunks>
   </component>
@@ -204,6 +250,8 @@
       <workItem from="1744032680789" duration="4419000" />
       <workItem from="1744116449106" duration="711000" />
       <workItem from="1744400439300" duration="1950000" />
+      <workItem from="1744477913203" duration="170000" />
+      <workItem from="1744498979275" duration="2033000" />
     </task>
     <servers />
   </component>
