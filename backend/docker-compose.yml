@@ -91,6 +91,22 @@ services:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka/
     networks:
       - microservices-network
+
+microservice4-service:
+    build: ./microservice4
+    image:  nessimayadi/backend-microservice4-service:latest
+    container_name: microservice4-nessim-service
+    ports:
+      - "8084:8084"
+    depends_on:
+      - eureka
+      - gateway
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka/
+    networks:
+      - microservices-network
+
+      
 networks:
   microservices-network:
     driver: bridge

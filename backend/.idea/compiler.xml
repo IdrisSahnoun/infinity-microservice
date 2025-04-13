@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -15,8 +16,9 @@
         <module name="microservice2" />
         <module name="User_microservice" />
         <module name="gateway" />
+        <module name="user-microservice" />
       </profile>
-      <profile name="Annotation profile for microservice5" enabled="true">
+      <profile name="Annotation profile for microservice4" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />

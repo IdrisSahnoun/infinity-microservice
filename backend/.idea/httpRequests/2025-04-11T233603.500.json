@@ -1,0 +1,6 @@
+{
+  "timestamp": "2025-04-11T22:36:03.103+00:00",
+  "status": 500,
+  "error": "Internal Server Error",
+  "path": "/plans/demarrer/1/1"
+}
