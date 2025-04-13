@@ -1,0 +1,27 @@
+/* src/app/mic3/bmi-calculator/bmi-calculator.component.css */
+.calculator-form {
+  border-radius: 15px;
+  transition: 0.3s ease-in-out;
+}
+
+.calculator-form:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bmi-result, .calories-result {
+  height: 100%;
+  border-radius: 15px;
+  transition: 0.3s ease-in-out;
+}
+
+.bmi-result:hover, .calories-result:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.badge {
+  font-weight: normal;
+  letter-spacing: 0.5px;
+}
+
+/* Using the existing course-item styles from food-list.component.css */
