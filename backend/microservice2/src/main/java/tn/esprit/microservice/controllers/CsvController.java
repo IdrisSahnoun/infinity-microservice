@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/csv")
+@RequestMapping("/stock")
 public class CsvController {
 
     private final CsvExportService csvExportService;

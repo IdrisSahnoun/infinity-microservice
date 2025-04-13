@@ -5,15 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afd91bf4-2328-4c66-b57b-11519fad4bc9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/target/classes/config/microservice.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/target/classes/config/microservice.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/target/classes/config/microservice1.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/target/classes/config/microservice1.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/config/microservice2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/config/microservice2.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config-server/target/classes/config/microservice2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/target/classes/config/microservice2.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/target/classes/config/microservice3.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/target/classes/config/microservice3.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/target/classes/config/microservice4.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/target/classes/config/microservice4.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/target/classes/config/microservice5.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/target/classes/config/microservice5.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/target/classes/config/user-microservice.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/target/classes/config/user-microservice.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/tn/esprit/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/tn/esprit/gateway/GatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice2/src/main/java/tn/esprit/microservice/controllers/CsvController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice2/src/main/java/tn/esprit/microservice/controllers/CsvController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-microservice/src/main/java/com/datmt/keycloak/springbootauth/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-microservice/src/main/java/com/datmt/keycloak/springbootauth/controller/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-microservice/src/main/java/com/datmt/keycloak/springbootauth/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-microservice/src/main/java/com/datmt/keycloak/springbootauth/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-microservice/src/main/java/tn/esprit/tpfoyer17/controllers/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-microservice/src/main/java/tn/esprit/tpfoyer17/services/auth/KeycloakConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-microservice/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-microservice/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/backoffice/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/backoffice/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/backoffice/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/backoffice/src/app/components/sidebar/sidebar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/components/sidebar/sidebar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/backoffice/src/app/layouts/admin-layout/admin-layout.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/layouts/admin-layout/admin-layout.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/backoffice/src/app/layouts/admin-layout/admin-layout.routing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/layouts/admin-layout/admin-layout.routing.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/frontoffice/src/app/mic2/products/products.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/frontoffice/src/app/mic2/products/products.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,8 +68,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.ConfigServerApplication.executor": "Run",
+    "Application.KeycloakSpringbootAuth.executor": "Run",
     "Application.MicroserviceApplication.executor": "Run",
     "HTTP Request.generated-requests | #10.executor": "Run",
+    "HTTP Request.generated-requests | #11.executor": "Run",
     "Maven.eureka [clean].executor": "Run",
     "Maven.eureka [install].executor": "Run",
     "Maven.gateway [clean].executor": "Run",
@@ -89,6 +98,7 @@
     "Spring Boot.ConfigServerApplication.executor": "Run",
     "Spring Boot.EurekaApplication.executor": "Run",
     "Spring Boot.GatewayApplication.executor": "Run",
+    "Spring Boot.KeycloakSpringbootAuth.executor": "Run",
     "Spring Boot.MicroserviceApplication.executor": "Run",
     "Spring Boot.TpFoyer17Application.executor": "Run",
     "git-widget-placeholder": "microservice2-mahdi",
@@ -119,13 +129,13 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="HTTP Request.generated-requests | #10">
-    <configuration name="ConfigServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="esprit.configserver.ConfigServerApplication" />
-      <module name="config-server" />
+  <component name="RunManager" selected="Spring Boot.KeycloakSpringbootAuth">
+    <configuration name="KeycloakSpringbootAuth" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.datmt.keycloak.springbootauth.KeycloakSpringbootAuth" />
+      <module name="User_microservice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="esprit.configserver.*" />
+          <option name="PATTERN" value="com.datmt.keycloak.springbootauth.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -149,6 +159,9 @@
     <configuration name="generated-requests | #10" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="10" requestIdentifier="#10" runType="Run single request">
       <method v="2" />
     </configuration>
+    <configuration name="generated-requests | #11" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="11" requestIdentifier="#11" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="config-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="esprit.configserver.ConfigServerApplication" />
@@ -166,6 +179,20 @@
     <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.gateway.GatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KeycloakSpringbootAuth" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="User_microservice" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.datmt.keycloak.springbootauth.KeycloakSpringbootAuth" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.datmt.keycloak.springbootauth.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -224,9 +251,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.KeycloakSpringbootAuth" />
+        <item itemvalue="Application.KeycloakSpringbootAuth" />
+        <item itemvalue="HTTP Request.generated-requests | #11" />
         <item itemvalue="HTTP Request.generated-requests | #10" />
         <item itemvalue="Application.MicroserviceApplication" />
-        <item itemvalue="Application.ConfigServerApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -252,6 +281,8 @@
       <workItem from="1744400439300" duration="1950000" />
       <workItem from="1744477913203" duration="170000" />
       <workItem from="1744498979275" duration="2033000" />
+      <workItem from="1744501775186" duration="1890000" />
+      <workItem from="1744554256352" duration="5635000" />
     </task>
     <servers />
   </component>
