@@ -4,17 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afd91bf4-2328-4c66-b57b-11519fad4bc9" name="Changes" comment="class init">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="afd91bf4-2328-4c66-b57b-11519fad4bc9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/config/microservice3.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/config/microservice3.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/tn/esprit/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/tn/esprit/gateway/GatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice3/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice3/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice3/src/main/java/tn/esprit/microservice3/Model/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice3/src/main/java/tn/esprit/microservice3/Model/Food.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice3/src/main/java/tn/esprit/microservice3/Rest/FoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice3/src/main/java/tn/esprit/microservice3/Rest/FoodController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice3/src/main/java/tn/esprit/microservice3/Service/FoodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice3/src/main/java/tn/esprit/microservice3/Service/FoodService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice3/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservice3/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/config/microservice2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/config/microservice2.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/target/classes/config/microservice2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/target/classes/config/microservice2.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice2/src/main/java/tn/esprit/microservice/controllers/CsvController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice2/src/main/java/tn/esprit/microservice/controllers/CsvController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-microservice/src/main/java/com/datmt/keycloak/springbootauth/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-microservice/src/main/java/com/datmt/keycloak/springbootauth/controller/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-microservice/src/main/java/com/datmt/keycloak/springbootauth/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-microservice/src/main/java/com/datmt/keycloak/springbootauth/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-microservice/src/main/java/tn/esprit/tpfoyer17/controllers/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-microservice/src/main/java/tn/esprit/tpfoyer17/services/auth/KeycloakConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-microservice/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-microservice/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/backoffice/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/backoffice/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/backoffice/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/backoffice/src/app/components/sidebar/sidebar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/components/sidebar/sidebar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/backoffice/src/app/layouts/admin-layout/admin-layout.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/layouts/admin-layout/admin-layout.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/backoffice/src/app/layouts/admin-layout/admin-layout.routing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/layouts/admin-layout/admin-layout.routing.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/frontoffice/src/app/mic2/products/products.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/frontoffice/src/app/mic2/products/products.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +52,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/IdrisSahnoun/infinity-microservice.git&quot;,
-    &quot;accountId&quot;: &quot;54f640ae-01bc-4061-837f-520686531603&quot;
+    &quot;accountId&quot;: &quot;99960faa-173e-4a98-8292-19f4149adc12&quot;
   }
 }</component>
   <component name="KubernetesApiPersistence">{}</component>
@@ -66,7 +72,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "HTTP Request.Microservice3Application | #1.executor": "Run",
+    "Application.ConfigServerApplication.executor": "Run",
+    "Application.KeycloakSpringbootAuth.executor": "Run",
+    "Application.MicroserviceApplication.executor": "Run",
+    "HTTP Request.generated-requests | #10.executor": "Run",
+    "HTTP Request.generated-requests | #11.executor": "Run",
     "Maven.eureka [clean].executor": "Run",
     "Maven.eureka [install].executor": "Run",
     "Maven.gateway [clean].executor": "Run",
@@ -94,10 +104,10 @@
     "Spring Boot.ConfigServerApplication.executor": "Run",
     "Spring Boot.EurekaApplication.executor": "Run",
     "Spring Boot.GatewayApplication.executor": "Run",
-    "Spring Boot.Microservice3Application.executor": "Run",
-    "Spring Boot.Microservice5Application.executor": "Run",
+    "Spring Boot.KeycloakSpringbootAuth.executor": "Run",
+    "Spring Boot.MicroserviceApplication.executor": "Run",
     "Spring Boot.TpFoyer17Application.executor": "Run",
-    "git-widget-placeholder": "microservice3-ayoub",
+    "git-widget-placeholder": "microservice2-mahdi",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/pc/Desktop/micro/infinity-microservice/backend",
@@ -134,8 +144,37 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MicroserviceApplication">
-    <configuration name="Microservice3Application | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/Microservice3Application.http" executionIdentifier="#1" runType="Run single request">
+  <component name="RunManager" selected="Spring Boot.KeycloakSpringbootAuth">
+    <configuration name="KeycloakSpringbootAuth" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.datmt.keycloak.springbootauth.KeycloakSpringbootAuth" />
+      <module name="User_microservice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.datmt.keycloak.springbootauth.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MicroserviceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="tn.esprit.microservice.MicroserviceApplication" />
+      <module name="microservice2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tn.esprit.microservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="generated-requests | #10" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="10" requestIdentifier="#10" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #11" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="11" requestIdentifier="#11" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -155,6 +194,20 @@
     <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.gateway.GatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KeycloakSpringbootAuth" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="User_microservice" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.datmt.keycloak.springbootauth.KeycloakSpringbootAuth" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.datmt.keycloak.springbootauth.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -213,15 +266,19 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.Microservice3Application | #1" />
+        <item itemvalue="Spring Boot.KeycloakSpringbootAuth" />
+        <item itemvalue="Application.KeycloakSpringbootAuth" />
+        <item itemvalue="HTTP Request.generated-requests | #11" />
+        <item itemvalue="HTTP Request.generated-requests | #10" />
+        <item itemvalue="Application.MicroserviceApplication" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
       </set>
     </attachedChunks>
   </component>
@@ -236,8 +293,11 @@
       <workItem from="1739449256591" duration="402000" />
       <workItem from="1744032680789" duration="4419000" />
       <workItem from="1744116449106" duration="711000" />
-      <workItem from="1744400439300" duration="6199000" />
-      <workItem from="1744406673515" duration="5018000" />
+      <workItem from="1744400439300" duration="1950000" />
+      <workItem from="1744477913203" duration="170000" />
+      <workItem from="1744498979275" duration="2033000" />
+      <workItem from="1744501775186" duration="1890000" />
+      <workItem from="1744554256352" duration="5635000" />
     </task>
     <task id="LOCAL-00001" summary="class init">
       <option name="closed" value="true" />

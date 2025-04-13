@@ -1,18 +1,44 @@
-GET http://localhost:8090/mic5/food
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+GET http://localhost:8082/stock
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
+content-length: 148
 
-<> 2025-04-11T222325.404.json
+{
+  "id": 0,
+  "itemCode": "",
+  "itemName": "",
+  "description": "",
+  "quantity": 0,
+  "price": 0,
+  "reorderThreshold": 0,
+  "supplierInfo": ""
+}
+
+<> 2025-04-13T010759.200.json
 
 ###
 
-GET http://localhost:8090/mic5/food
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+GET http://localhost:8082/stock
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
+content-length: 148
 
-<> 2025-04-11T222313.404.json
+{
+  "id": 0,
+  "itemCode": "",
+  "itemName": "",
+  "description": "",
+  "quantity": 0,
+  "price": 0,
+  "reorderThreshold": 0,
+  "supplierInfo": ""
+}
+
+<> 2025-04-13T001117.404.html
 
 ###
 
