@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.Set;
 
 @RestController
-@RequestMapping("/mic1/statistiques")
+@RequestMapping("/api/statistiques")
 public class StatistiqueController {
 
     @Autowired

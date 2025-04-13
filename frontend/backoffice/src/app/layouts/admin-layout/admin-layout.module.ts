@@ -17,6 +17,7 @@ import {MatRippleModule} from '@angular/material/core';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
+import { Microservice1Module } from '../../microservice1/microservice1.module';
 
 @NgModule({
   imports: [
@@ -30,6 +31,7 @@ import {MatSelectModule} from '@angular/material/select';
     MatInputModule,
     MatSelectModule,
     MatTooltipModule,
+    Microservice1Module,
   ],
   declarations: [
     DashboardComponent,

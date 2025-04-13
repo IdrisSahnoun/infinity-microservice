@@ -1,0 +1,220 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-primary">
+            <h4 class="card-title">{{ isEdit ? 'Edit' : 'Add' }} Sports Facility</h4>
+            <p class="card-category">{{ isEdit ? 'Update the information of an existing facility' : 'Add a new sports facility to the system' }}</p>
+          </div>
+          <div class="card-body">
+            <div class="alert alert-danger" *ngIf="error">
+              {{ error }}
+            </div>
+            
+            <div *ngIf="loading" class="text-center my-4">
+              <div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+            
+            <form [formGroup]="salleForm" (ngSubmit)="onSubmit()" *ngIf="!loading">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="nom">Name</label>
+                    <input type="text" class="form-control" id="nom" formControlName="nom">
+                    <div class="text-danger" *ngIf="salleForm.get('nom').invalid && (salleForm.get('nom').dirty || salleForm.get('nom').touched)">
+                      Name is required
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" formControlName="email">
+                    <div class="text-danger" *ngIf="salleForm.get('email').invalid && (salleForm.get('email').dirty || salleForm.get('email').touched)">
+                      Valid email is required
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="adresse">Address</label>
+                    <input type="text" class="form-control" id="adresse" formControlName="adresse">
+                    <div class="text-danger" *ngIf="salleForm.get('adresse').invalid && (salleForm.get('adresse').dirty || salleForm.get('adresse').touched)">
+                      Address is required
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="ville">City</label>
+                    <input type="text" class="form-control" id="ville" formControlName="ville">
+                    <div class="text-danger" *ngIf="salleForm.get('ville').invalid && (salleForm.get('ville').dirty || salleForm.get('ville').touched)">
+                      City is required
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="codePostal">Postal Code</label>
+                    <input type="text" class="form-control" id="codePostal" formControlName="codePostal">
+                    <div class="text-danger" *ngIf="salleForm.get('codePostal').invalid && (salleForm.get('codePostal').dirty || salleForm.get('codePostal').touched)">
+                      Postal code is required
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="telephone">Phone</label>
+                    <input type="text" class="form-control" id="telephone" formControlName="telephone">
+                    <div class="text-danger" *ngIf="salleForm.get('telephone').invalid && (salleForm.get('telephone').dirty || salleForm.get('telephone').touched)">
+                      Phone is required
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="siteWeb">Website</label>
+                    <input type="text" class="form-control" id="siteWeb" formControlName="siteWeb">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="horairesOuverture">Opening Hours</label>
+                    <input type="text" class="form-control" id="horairesOuverture" formControlName="horairesOuverture">
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="capacite">Capacity</label>
+                    <input type="number" class="form-control" id="capacite" formControlName="capacite">
+                    <div class="text-danger" *ngIf="salleForm.get('capacite').invalid && (salleForm.get('capacite').dirty || salleForm.get('capacite').touched)">
+                      Valid capacity is required
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="superficie">Area (m²)</label>
+                    <input type="number" class="form-control" id="superficie" formControlName="superficie">
+                    <div class="text-danger" *ngIf="salleForm.get('superficie').invalid && (salleForm.get('superficie').dirty || salleForm.get('superficie').touched)">
+                      Valid area is required
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="prixMoyenAbonnement">Average Price</label>
+                    <input type="number" class="form-control" id="prixMoyenAbonnement" formControlName="prixMoyenAbonnement">
+                    <div class="text-danger" *ngIf="salleForm.get('prixMoyenAbonnement').invalid && (salleForm.get('prixMoyenAbonnement').dirty || salleForm.get('prixMoyenAbonnement').touched)">
+                      Valid price is required
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea class="form-control" id="description" rows="3" formControlName="description"></textarea>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="imageUrl">Image URL</label>
+                    <input type="text" class="form-control" id="imageUrl" formControlName="imageUrl">
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" formControlName="parkingDisponible">
+                      Parking Available
+                      <span class="form-check-sign">
+                        <span class="check"></span>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" formControlName="vestiairesDisponibles">
+                      Lockers Available
+                      <span class="form-check-sign">
+                        <span class="check"></span>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" formControlName="douchesDisponibles">
+                      Showers Available
+                      <span class="form-check-sign">
+                        <span class="check"></span>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row mt-4">
+                <div class="col-md-12">
+                  <h4>Available Sports</h4>
+                  <div class="sports-selection">
+                    <div class="row">
+                      <div class="col-md-4" *ngFor="let sport of allSports">
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" 
+                              [checked]="isSportSelected(sport.codeSport)" 
+                              (change)="toggleSport(sport.codeSport)">
+                            {{ sport.nom }}
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="text-right">
+                <button type="button" class="btn btn-default" [routerLink]="['/microservice1/salles']">Cancel</button>
+                <button type="submit" class="btn btn-primary" [disabled]="salleForm.invalid || submitting">
+                  <span *ngIf="submitting" class="spinner-border spinner-border-sm mr-1"></span>
+                  {{ isEdit ? 'Update' : 'Create' }}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 

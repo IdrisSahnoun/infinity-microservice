@@ -60,4 +60,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'maps',           component: MapsComponent },
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
+    { path: 'microservice1/salles',   component: DashboardComponent },
+    { path: 'microservice1/sports',   component: DashboardComponent },
 ];

@@ -1,0 +1,151 @@
+<section class="container my-5">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="section-title">Sports Facilities Statistics</h2>
+      <p class="section-description">Real-time insights about sports facilities</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- General Statistics Card -->
+    <div class="col-md-6 mb-4">
+      <div class="card stats-card">
+        <div class="card-header bg-primary text-white">
+          <h4 class="mb-0">General Statistics</h4>
+        </div>
+        <div class="card-body">
+          <div *ngIf="loading" class="text-center py-4">
+            <div class="spinner-border text-primary" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+          
+          <div *ngIf="error" class="alert alert-danger">
+            <strong>Error:</strong> {{ error }}
+            <small class="d-block mt-2">Using fallback data for demonstration.</small>
+          </div>
+          
+          <div *ngIf="statistics">
+            <div class="stat-item">
+              <h5>Total Sports Facilities</h5>
+              <p class="stat-value">{{ statistics.totalSalles }}</p>
+            </div>
+            
+            <div class="stat-item">
+              <h5>Average Monthly Subscription</h5>
+              <p class="stat-value">{{ statistics.moyennePrix }} €</p>
+            </div>
+            
+            <div class="stat-item">
+              <h5>Total Capacity</h5>
+              <p class="stat-value">{{ statistics.capaciteTotale }} people</p>
+            </div>
+            
+            <div class="stat-item">
+              <h5>Top Cities</h5>
+              <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let city of topCities">
+                  {{ city[0] }}
+                  <span class="badge bg-primary">{{ city[1] }}</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="stat-item">
+              <h5>Most Offered Sports</h5>
+              <div class="sport-tags">
+                <span class="badge bg-primary me-2 mb-2" *ngFor="let sport of topSports">
+                  {{ sport }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Sports Trends Card -->
+    <div class="col-md-6 mb-4">
+      <div class="card stats-card">
+        <div class="card-header bg-success text-white">
+          <h4 class="mb-0">Sports Trends by City</h4>
+        </div>
+        <div class="card-body">
+          <div *ngIf="loading" class="text-center py-4">
+            <div class="spinner-border text-success" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+          
+          <div *ngIf="error" class="alert alert-danger">
+            <strong>Error:</strong> {{ error }}
+            <small class="d-block mt-2">Using fallback data for demonstration.</small>
+          </div>
+          
+          <div *ngIf="tendancesParVille">
+            <div class="mb-3">
+              <select class="form-control" #citySelect (change)="citySelect.value">
+                <option value="">Select a city</option>
+                <option *ngFor="let city of topCities" [value]="city[0]">{{ city[0] }}</option>
+              </select>
+            </div>
+            
+            <div *ngIf="citySelect?.value">
+              <h5>Trends in {{ citySelect.value }}</h5>
+              <div class="table-responsive">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>Sport</th>
+                      <th>Facilities</th>
+                      <th>Popularity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let trend of getTrendsForCity(citySelect.value)">
+                      <td>{{ trend.sport }}</td>
+                      <td>{{ trend.nombreSalles }}</td>
+                      <td>
+                        <div class="progress">
+                          <div class="progress-bar bg-success" role="progressbar" 
+                              [style.width]="(trend.popularite * 100) + '%'"
+                              [attr.aria-valuenow]="trend.popularite * 100" 
+                              aria-valuemin="0" aria-valuemax="100">
+                              {{ (trend.popularite * 100).toFixed(0) }}%
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+            <div *ngIf="!citySelect?.value" class="alert alert-info">
+              Please select a city to view trends.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div *ngIf="error" class="row mt-4">
+    <div class="col-12">
+      <div class="card bg-light">
+        <div class="card-header">
+          <h5>Troubleshooting Information</h5>
+        </div>
+        <div class="card-body">
+          <p>If you're encountering errors, please check:</p>
+          <ol>
+            <li>Ensure your backend server is running on port 8081</li>
+            <li>Check that CORS is properly configured on the backend</li>
+            <li>Verify the API endpoints are correct in the environment.ts file</li>
+          </ol>
+          <p><small>Current API URL: http://localhost:8081/api/statistiques</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
