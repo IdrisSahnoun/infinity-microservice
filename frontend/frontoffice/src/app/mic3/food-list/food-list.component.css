@@ -1,0 +1,77 @@
+/* src/app/mic3/food-list/food-list.component.css */
+.section-title {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.section-title::before {
+  position: absolute;
+  content: "";
+  width: 45px;
+  height: 2px;
+  top: 50%;
+  left: -55px;
+  margin-top: -1px;
+  background: var(--primary);
+}
+
+.section-title::after {
+  position: absolute;
+  content: "";
+  width: 45px;
+  height: 2px;
+  top: 50%;
+  right: -55px;
+  margin-top: -1px;
+  background: var(--primary);
+}
+
+.course-item {
+  transition: 0.3s ease-in-out;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.course-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.course-item .text-center {
+  padding: 1.5rem 1rem;
+}
+
+.course-item h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.course-item h5 {
+  font-size: 1.25rem;
+  color: #555;
+}
+
+.course-item .badge {
+  font-size: 0.9rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 20px;
+}
+
+.course-item .d-flex {
+  border-top: 1px solid #ddd;
+  margin-top: 1rem;
+}
+
+.course-item .d-flex small {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.course-item .d-flex small i {
+  margin-right: 0.5rem;
+  color: var(--primary);
+}

@@ -27,6 +27,8 @@
         <div class="product-item bg-light">
           <div class="position-relative overflow-hidden">
             <img class="img-fluid w-100"
+                 [src]="'../../assets/img/equipment-' + (($index % 6) + 1) + '.jpg'"
+
                  [src]="'../../assets/img/gym_eq.jpg'"
                  [alt]="product.itemName">
             <div class="product-overlay">

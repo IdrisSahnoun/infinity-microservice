@@ -4,6 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="afd91bf4-2328-4c66-b57b-11519fad4bc9" name="Changes" comment="metier avance done">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/tn/esprit/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/tn/esprit/gateway/GatewayApplication.java" afterDir="false" />
     <list default="true" id="afd91bf4-2328-4c66-b57b-11519fad4bc9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -70,6 +73,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;HTTP Request.Microservice3Application | #1.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.eureka [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.eureka [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.gateway [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.gateway [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.microservice [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.microservice [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.microservice2 [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.microservice2 [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.microservice3 [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.microservice3 [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.microservice4 [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.microservice4 [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.microservice5 [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.microservice5 [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.tpFoyer-17 [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.tpFoyer-17 [install].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ConfigServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.EurekaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.Microservice3Application.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.Microservice5Application.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.TpFoyer17Application.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;microservice3-ayoub&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ayari/Desktop/C-Esprit/S2/Applications web distribuées__4SAE7/Project_Validation/infinity-microservice/backend/config-server/src/main/resources/config&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.ConfigServerApplication.executor": "Run",
@@ -123,7 +169,7 @@
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ayari\Desktop\C-Esprit\S2\Applications web distribuées__4SAE7\Project_Validation\infinity-microservice\backend\config-server\src\main\resources\config" />
@@ -293,6 +339,11 @@
       <workItem from="1739449256591" duration="402000" />
       <workItem from="1744032680789" duration="4419000" />
       <workItem from="1744116449106" duration="711000" />
+      <workItem from="1744400439300" duration="6199000" />
+      <workItem from="1744406673515" duration="6347000" />
+      <workItem from="1744521091302" duration="1075000" />
+      <workItem from="1744565909693" duration="4499000" />
+
       <workItem from="1744400439300" duration="1950000" />
       <workItem from="1744477913203" duration="170000" />
       <workItem from="1744498979275" duration="2033000" />
@@ -307,7 +358,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744402518414</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="metier avance done">
+      <option name="closed" value="true" />
+      <created>1744412007079</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1744412007079</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,6 +374,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="class init" />
-    <option name="LAST_COMMIT_MESSAGE" value="class init" />
+    <MESSAGE value="metier avance done" />
+    <option name="LAST_COMMIT_MESSAGE" value="metier avance done" />
   </component>
 </project>
