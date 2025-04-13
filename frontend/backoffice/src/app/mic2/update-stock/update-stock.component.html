@@ -1,0 +1,175 @@
+<br><br>
+<div class="container-fluid py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-10 col-lg-8">
+            <!-- Not Found Error -->
+            <div *ngIf="notFound" class="card shadow">
+                <div class="card-body text-center py-5">
+                    <i class="fa fa-exclamation-triangle fa-3x text-warning mb-3"></i>
+                    <h3>Stock Item Not Found</h3>
+                    <p class="text-muted">{{ errorMessage }}</p>
+                    <button class="btn btn-primary mt-3" (click)="cancel()">
+                        <i class="fa fa-arrow-left me-2"></i> Back to Stock List
+                    </button>
+                </div>
+            </div>
+
+            <!-- Loading State -->
+            <div *ngIf="isLoading && !notFound" class="card shadow">
+                <div class="card-body text-center py-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p class="mt-3 mb-0">Loading stock item details...</p>
+                </div>
+            </div>
+
+            <!-- Update Form -->
+            <div *ngIf="!isLoading && !notFound" class="card shadow">
+                <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Update Stock Item #{{ itemId }}</h5>
+                    <button class="btn btn-sm btn-light" (click)="cancel()">
+                        <i class="fa fa-arrow-left me-1"></i> Back to List
+                    </button>
+                </div>
+
+                <div class="card-body">
+                    <!-- Error Alert -->
+                    <div *ngIf="errorMessage" class="alert alert-danger alert-dismissible fade show">
+                        {{ errorMessage }}
+                        <button type="button" class="btn-close" (click)="errorMessage = null"></button>
+                    </div>
+
+                    <!-- Stock Item Form -->
+                    <form [formGroup]="stockForm" (ngSubmit)="onSubmit()">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="itemCode" class="form-label">Item Code</label>
+                                <input
+                                        type="text"
+                                        id="itemCode"
+                                        formControlName="itemCode"
+                                        class="form-control"
+                                        [ngClass]="{ 'is-invalid': submitted && f['itemCode'].errors }"
+                                        placeholder="e.g. GYM-001"
+                                >
+                                <div *ngIf="submitted && f['itemCode'].errors" class="invalid-feedback">
+                                    <div *ngIf="f['itemCode'].errors['required']">Item code is required</div>
+                                    <div *ngIf="f['itemCode'].errors['maxlength']">Item code cannot exceed 20 characters</div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="itemName" class="form-label">Item Name</label>
+                                <input
+                                        type="text"
+                                        id="itemName"
+                                        formControlName="itemName"
+                                        class="form-control"
+                                        [ngClass]="{ 'is-invalid': submitted && f['itemName'].errors }"
+                                        placeholder="e.g. Dumbbell Set"
+                                >
+                                <div *ngIf="submitted && f['itemName'].errors" class="invalid-feedback">
+                                    <div *ngIf="f['itemName'].errors['required']">Item name is required</div>
+                                    <div *ngIf="f['itemName'].errors['maxlength']">Item name cannot exceed 100 characters</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Description</label>
+                            <textarea
+                                    id="description"
+                                    formControlName="description"
+                                    class="form-control"
+                                    [ngClass]="{ 'is-invalid': submitted && f['description'].errors }"
+                                    placeholder="Provide details about the item"
+                                    rows="3"
+                            ></textarea>
+                            <div *ngIf="submitted && f['description'].errors" class="invalid-feedback">
+                                <div *ngIf="f['description'].errors['maxlength']">Description cannot exceed 500 characters</div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-4">
+                                <label for="quantity" class="form-label">Quantity</label>
+                                <input
+                                        type="number"
+                                        id="quantity"
+                                        formControlName="quantity"
+                                        class="form-control"
+                                        [ngClass]="{ 'is-invalid': submitted && f['quantity'].errors }"
+                                        min="0"
+                                >
+                                <div *ngIf="submitted && f['quantity'].errors" class="invalid-feedback">
+                                    <div *ngIf="f['quantity'].errors['required']">Quantity is required</div>
+                                    <div *ngIf="f['quantity'].errors['min']">Quantity must be 0 or greater</div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="price" class="form-label">Price ($)</label>
+                                <input
+                                        type="number"
+                                        id="price"
+                                        formControlName="price"
+                                        class="form-control"
+                                        [ngClass]="{ 'is-invalid': submitted && f['price'].errors }"
+                                        min="0"
+                                        step="0.01"
+                                >
+                                <div *ngIf="submitted && f['price'].errors" class="invalid-feedback">
+                                    <div *ngIf="f['price'].errors['required']">Price is required</div>
+                                    <div *ngIf="f['price'].errors['min']">Price must be 0 or greater</div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="reorderThreshold" class="form-label">Reorder Threshold</label>
+                                <input
+                                        type="number"
+                                        id="reorderThreshold"
+                                        formControlName="reorderThreshold"
+                                        class="form-control"
+                                        [ngClass]="{ 'is-invalid': submitted && f['reorderThreshold'].errors }"
+                                        min="0"
+                                >
+                                <div *ngIf="submitted && f['reorderThreshold'].errors" class="invalid-feedback">
+                                    <div *ngIf="f['reorderThreshold'].errors['required']">Reorder threshold is required</div>
+                                    <div *ngIf="f['reorderThreshold'].errors['min']">Reorder threshold must be 0 or greater</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="supplierInfo" class="form-label">Supplier Information</label>
+                            <input
+                                    type="text"
+                                    id="supplierInfo"
+                                    formControlName="supplierInfo"
+                                    class="form-control"
+                                    [ngClass]="{ 'is-invalid': submitted && f['supplierInfo'].errors }"
+                                    placeholder="e.g. FitEquip Pro, contact: sales@fitequippro.com"
+                            >
+                            <div *ngIf="submitted && f['supplierInfo'].errors" class="invalid-feedback">
+                                <div *ngIf="f['supplierInfo'].errors['maxlength']">Supplier info cannot exceed 200 characters</div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-2 justify-content-end">
+                            <button type="button" class="btn btn-outline-danger" (click)="cancel()">
+                                <i class="fa fa-times me-1"></i> Cancel
+                            </button>
+                            <button type="submit" class="btn btn-primary" [disabled]="isSubmitting">
+                                <span *ngIf="isSubmitting" class="spinner-border spinner-border-sm me-1"></span>
+                                <i *ngIf="!isSubmitting" class="fa fa-save me-1"></i>
+                                Update Item
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

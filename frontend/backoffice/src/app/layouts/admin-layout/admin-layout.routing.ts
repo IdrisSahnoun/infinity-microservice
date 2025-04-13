@@ -10,6 +10,10 @@ import { NotificationsComponent } from '../../notifications/notifications.compon
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import {FoodListComponent} from "../../mic3/food-list/food-list.component";
 
+import {AddStockItemComponent} from "../../mic2/add-stock-item/add-stock-item.component";
+import {ListStockComponent} from "../../mic2/list-stock/list-stock.component";
+import {UpdateStockComponent} from "../../mic2/update-stock/update-stock.component";
+
 export const AdminLayoutRoutes: Routes = [
     // {
     //   path: '',
@@ -62,5 +66,9 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
     { path: 'food-list', component: FoodListComponent },
+
+    {path: 'stock/add', component: AddStockItemComponent },
+    {path:'stock/list', component: ListStockComponent },
+    { path: 'stock/edit/:id', component: UpdateStockComponent },
 
 ];

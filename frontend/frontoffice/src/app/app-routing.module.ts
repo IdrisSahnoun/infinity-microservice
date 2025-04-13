@@ -11,6 +11,7 @@ import {ProductsComponent} from "./mic2/products/products.component";
 import {FoodListComponent} from "./mic3/food-list/food-list.component";
 import {BmiCalculatorComponent} from "./mic3/bmi-calculator/bmi-calculator.component";
 
+
 // Declare routes outside the class
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path : 'products', component: ProductsComponent },
   {path: 'food-list', component: FoodListComponent},
   { path: 'bmi-calculator', component: BmiCalculatorComponent },
+
 
   { path: '**', component: NotfoundComponent }, // Keep this as the last route
 ];

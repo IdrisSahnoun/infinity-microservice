@@ -20,6 +20,7 @@ import { FoodListComponent } from './mic3/food-list/food-list.component';
 import { BmiCalculatorComponent } from './mic3/bmi-calculator/bmi-calculator.component';
 import {ReactiveFormsModule} from "@angular/forms";
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,11 +37,13 @@ import {ReactiveFormsModule} from "@angular/forms";
     ProductsComponent,
     FoodListComponent,
     BmiCalculatorComponent
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgOptimizedImage, HttpClientModule, ReactiveFormsModule
+    NgOptimizedImage,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

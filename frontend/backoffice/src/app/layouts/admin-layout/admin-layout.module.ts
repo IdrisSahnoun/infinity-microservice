@@ -20,6 +20,9 @@ import {MatSelectModule} from '@angular/material/select';
 import {FoodListComponent} from "../../mic3/food-list/food-list.component";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 
+import {AddStockItemComponent} from "../../mic2/add-stock-item/add-stock-item.component";
+import {ListStockComponent} from "../../mic2/list-stock/list-stock.component";
+
 @NgModule({
   imports: [
     CommonModule,
@@ -46,6 +49,8 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
     UpgradeComponent,
     FoodListComponent,
 
+
+      AddStockItemComponent,ListStockComponent
   ]
 })
 
