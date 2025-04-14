@@ -70,8 +70,9 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'maps',           component: MapsComponent },
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
+    { path: 'microservice1/salles',   component: DashboardComponent },
+    { path: 'microservice1/sports',   component: DashboardComponent },
     { path: 'food-list', component: FoodListComponent },
-
     {path: 'stock/add', component: AddStockItemComponent },
     {path:'stock/list', component: ListStockComponent },
     { path: 'stock/edit/:id', component: UpdateStockComponent },

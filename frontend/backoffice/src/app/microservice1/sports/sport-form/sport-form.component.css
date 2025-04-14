@@ -1,0 +1,9 @@
+.card-header-primary {
+  background: linear-gradient(60deg, #ab47bc, #8e24aa);
+  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
+}
+
+.spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
+} 

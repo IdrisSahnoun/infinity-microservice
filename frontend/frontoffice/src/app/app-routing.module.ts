@@ -5,6 +5,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { CoursesComponent } from './courses/courses.component';
 import { OurTeamComponent } from './our-team/our-team.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
+import { StatistiquesDashboardComponent } from './mic1/statistiques/dashboard/statistiques-dashboard.component';
 import {AboutUsComponent} from "./about-us/about-us.component";
 import {ContactComponent} from "./contact/contact.component";
 import {ProductsComponent} from "./mic2/products/products.component";
@@ -21,11 +22,10 @@ const routes: Routes = [
   { path: 'testemonial', component: TestimonialComponent },
   { path: 'aboutus', component: AboutUsComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'mic1/statistiques/dashboard', component: StatistiquesDashboardComponent },
   {path : 'products', component: ProductsComponent },
   {path: 'food-list', component: FoodListComponent},
   { path: 'bmi-calculator', component: BmiCalculatorComponent },
-
-
   { path: '**', component: NotfoundComponent }, // Keep this as the last route
 ];
 

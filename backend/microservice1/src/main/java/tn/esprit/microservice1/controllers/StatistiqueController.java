@@ -10,8 +10,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * Controller for statistics-related endpoints
+ * Accessible directly and through gateway
+ */
 @RestController
-@RequestMapping("/mic1/statistiques")
+@RequestMapping("/api/statistiques")
 public class StatistiqueController {
 
     @Autowired
@@ -19,6 +23,7 @@ public class StatistiqueController {
 
     @GetMapping("/salles")
     public ResponseEntity<Map<String, Object>> getStatistiquesSalles() {
+        System.out.println("StatistiqueController: getStatistiquesSalles called");
         return ResponseEntity.ok(statistiqueService.getStatistiquesSalles());
     }
 
@@ -27,11 +32,13 @@ public class StatistiqueController {
             @RequestParam String ville,
             @RequestParam Double prixMax,
             @RequestParam Set<String> sportsPreferes) {
+        System.out.println("StatistiqueController: getRecommandationsSalles called with ville=" + ville);
         return ResponseEntity.ok(statistiqueService.getRecommandationsSalles(ville, prixMax, sportsPreferes));
     }
 
     @GetMapping("/tendances")
     public ResponseEntity<Map<String, List<Map<String, Object>>>> getTendancesParVille() {
+        System.out.println("StatistiqueController: getTendancesParVille called");
         return ResponseEntity.ok(statistiqueService.getTendancesParVille());
     }
 } 

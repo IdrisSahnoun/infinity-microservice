@@ -2,6 +2,8 @@ package tn.esprit.microservice1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.core.env.Environment;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -11,6 +13,7 @@ import org.slf4j.LoggerFactory;
 @SpringBootApplication
 @EnableScheduling
 @EnableAspectJAutoProxy
+@EnableDiscoveryClient
 public class Microservice1Application {
 	private static final Logger log = LoggerFactory.getLogger(Microservice1Application.class);
 
@@ -28,5 +31,4 @@ public class Microservice1Application {
 				env.getProperty("spring.cloud.config.uri"),
 				env.getActiveProfiles());
 	}
-
 }
