@@ -1,0 +1,17 @@
+<div class="container mt-4">
+    <h2>Liste des Événements</h2>
+    <div class="row">
+      <div *ngFor="let event of events" class="col-md-4 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ event.name }}</h5>
+            <p class="card-text">{{ event.description }}</p>
+            <p>Date: {{ event.date | date:'shortDate' }}</p>
+            <p>Lieu: {{ event.location }}</p>
+            <p>Participants: {{ event.participants?.length }} / {{ event.max_participants }}</p>
+            <button class="btn btn-primary" (click)="register(event.event_id)">S'inscrire</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

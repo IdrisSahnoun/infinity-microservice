@@ -1,0 +1,58 @@
+.container {
+    padding: 20px;
+  
+    .form,
+    .tools {
+      margin-bottom: 15px;
+  
+      input,
+      select,
+      button {
+        margin-right: 10px;
+        padding: 5px;
+      }
+    }
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+  
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+      }
+  
+      th {
+        background-color: #f0f0f0;
+      }
+    }
+  
+    .stats p {
+      margin: 0;
+      font-weight: 500;
+    }
+  
+    .btn {
+      border: none;
+      padding: 6px 10px;
+      margin-right: 4px;
+      border-radius: 4px;
+      color: #fff;
+      cursor: pointer;
+  
+      &.btn-warning {
+        background-color: #ffc107;
+      }
+  
+      &.btn-danger {
+        background-color: #dc3545;
+      }
+  
+      &.btn-success {
+        background-color: #28a745;
+      }
+    }
+  }
+  

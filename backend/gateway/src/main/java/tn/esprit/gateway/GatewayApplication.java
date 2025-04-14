@@ -31,7 +31,12 @@ public class GatewayApplication {
 				.route("microservice4", r -> r.path("/plans/**").uri("lb://microservice4"))
 				.route("microservice3", r -> r.path("/mic3/**").uri("lb://microservice3"))
 				.route("user-microservice", r -> r.path("/auth/**").uri("lb://user-microservice"))
-				
+
+				// ✅ Nouvelle route corrigée pour Event Management
+				.route("event-management", r -> r
+						.path("/api/events/**")
+						.uri("http://localhost:5000") // Forward full path (no prefix stripped)
+				)
 				.build();
 	}
 

@@ -1,9 +1,10 @@
 package com.datmt.keycloak.springbootauth.http.requests;
 
 
+import jakarta.persistence.*;
 import lombok.Data;
 
-import javax.persistence.*;
+//import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.UUID;
 

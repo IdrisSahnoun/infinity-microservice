@@ -13,6 +13,10 @@ import {FoodListComponent} from "../../mic3/food-list/food-list.component";
 import {AddStockItemComponent} from "../../mic2/add-stock-item/add-stock-item.component";
 import {ListStockComponent} from "../../mic2/list-stock/list-stock.component";
 import {UpdateStockComponent} from "../../mic2/update-stock/update-stock.component";
+import { PlansComponent } from 'app/plans/plans.component';
+import { AdminEventsComponent } from 'app/admin/admin-events/admin-events.component';
+import { CreateEventComponent } from 'app/admin/create-event/create-event.component';
+import { EventParticipantsComponent } from 'app/admin/event-participants/event-participants.component';
 import { MicComponent } from '../../mic/mic.component'; // Import the MicComponent
 import { AddMicComponent } from '../../mic/add-mic/add-mic.component';
 import { EditMicComponent } from '../../mic/edit-mic/edit-mic.component';
@@ -76,6 +80,10 @@ export const AdminLayoutRoutes: Routes = [
     {path: 'stock/add', component: AddStockItemComponent },
     {path:'stock/list', component: ListStockComponent },
     { path: 'stock/edit/:id', component: UpdateStockComponent },
+   { path: 'plans', component: PlansComponent }, // Missing comma was here
+   { path: 'admin/events', component: AdminEventsComponent },
+{ path: 'admin/events/create', component: CreateEventComponent },
+{ path: 'admin/events/:id/participants', component: EventParticipantsComponent },
     { path: 'mic', component: MicComponent },
     { path: 'mic/add', component: AddMicComponent }, // Add a new competition
     { path: 'mic/edit/:id', component: EditMicComponent }, // Edit a competition

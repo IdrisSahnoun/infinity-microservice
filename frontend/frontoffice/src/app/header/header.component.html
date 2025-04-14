@@ -1,5 +1,6 @@
+<!-- app-header.component.html -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-  <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+  <a routerLink="/home" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
     <h2 class="m-0 text-primary"><i class="fa fa-dumbbell me-3"></i>InifinityGym</h2>
   </a>
   <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -10,6 +11,7 @@
       <a routerLink="/home" class="nav-item nav-link active">Home</a>
       <a routerLink="/classes" class="nav-item nav-link">Classes</a>
       <a routerLink="/products" class="nav-item nav-link">Products</a>
+      <a routerLink="/events" class="nav-item nav-link">Events</a>
       <a routerLink="/abonnements" class="nav-item nav-link">Abonnement</a>
 
 
@@ -18,7 +20,7 @@
         <div class="dropdown-menu fade-down m-0">
           <a routerLink="/trainers" class="dropdown-item">Our Trainers</a>
           <a routerLink="/success-stories" class="dropdown-item">Success Stories</a>
-          <a routerLink="/membership" class="dropdown-item">Membership</a>
+          <a routerLink="/plans" class="dropdown-item">Training Plans</a>
         </div>
       </div>
       <a routerLink="/mic1/statistiques/dashboard" class="nav-item nav-link">Statistics</a>
