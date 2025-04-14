@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="afd91bf4-2328-4c66-b57b-11519fad4bc9" name="Changes" comment="metier avance done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/tn/esprit/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/tn/esprit/gateway/GatewayApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,6 +226,7 @@
       <workItem from="1744406673515" duration="6347000" />
       <workItem from="1744521091302" duration="1075000" />
       <workItem from="1744565909693" duration="4499000" />
+      <workItem from="1744633478371" duration="1823000" />
     </task>
     <task id="LOCAL-00001" summary="class init">
       <option name="closed" value="true" />
