@@ -35,7 +35,7 @@ public class GatewayApplication {
 				.build();
 	}
 
-	@Bean
+	@Bean(name = "corsWebFilterrrr")
 	public CorsWebFilter corsWebFilter() {
 		CorsConfiguration config = new CorsConfiguration();
 		config.addAllowedOrigin("http://localhost:4200");  // ton frontend

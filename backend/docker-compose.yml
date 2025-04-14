@@ -39,7 +39,7 @@ services:
     image:  idrissahnoun/backend-microservice-service:latest
     container_name: microservice-idris-service
     ports:
-      - "8082:8082"
+      - "8083:8083"
     depends_on:
       - eureka
       - gateway
