@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   // Use the gateway URL, not direct microservice URL
-  apiUrl: 'http://localhost:8080'
+  apiUrl: 'http://localhost:8088'
 };
 
 /*
