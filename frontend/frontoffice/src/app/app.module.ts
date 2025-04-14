@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -14,6 +13,8 @@ import { OurTeamComponent } from './our-team/our-team.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { ContactComponent } from './contact/contact.component';
+import { StatistiquesDashboardComponent } from './mic1/statistiques/dashboard/statistiques-dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
 import { ProductsComponent } from './mic2/products/products.component';
 import {HttpClientModule} from "@angular/common/http";
 import { FoodListComponent } from './mic3/food-list/food-list.component';
@@ -34,6 +35,7 @@ import {ReactiveFormsModule} from "@angular/forms";
     TestimonialComponent,
     NotfoundComponent,
     ContactComponent,
+    StatistiquesDashboardComponent
     ProductsComponent,
     FoodListComponent,
     BmiCalculatorComponent
@@ -42,6 +44,7 @@ import {ReactiveFormsModule} from "@angular/forms";
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
     NgOptimizedImage, HttpClientModule, ReactiveFormsModule
     NgOptimizedImage,HttpClientModule
   ],

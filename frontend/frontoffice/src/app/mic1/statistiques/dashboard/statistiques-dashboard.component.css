@@ -1,0 +1,204 @@
+.section-title {
+  position: relative;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.section-title::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background-color: #007bff;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+
+.section-description {
+  color: #6c757d;
+  margin-bottom: 2rem;
+}
+
+.stats-card {
+  height: 100%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.stats-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.stat-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #007bff;
+}
+
+.sport-tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.progress {
+  height: 20px;
+}
+
+.list-group-item {
+  transition: background-color 0.2s;
+}
+
+.list-group-item:hover {
+  background-color: #f8f9fa;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.selected-sports {
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  background-color: #f8f9fa;
+}
+
+.badge .btn-close {
+  font-size: 0.5rem;
+  line-height: 0.5;
+}
+
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+
+@media (max-width: 767.98px) {
+  .col-md-6.mb-4 {
+    margin-bottom: 2rem !important;
+  }
+}
+
+.dashboard-container {
+  padding: 20px;
+}
+
+.card {
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card-header {
+  font-weight: bold;
+}
+
+.stat-item {
+  margin-bottom: 20px;
+}
+
+.stat-value {
+  font-size: 2em;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Additional styles for better appearance */
+.troubleshooting-section {
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+pre {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  overflow: auto;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #007bff;
+  margin-top: 8px;
+}
+
+/* Alert styling */
+.alert {
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+
+.alert-warning {
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+  color: #856404;
+}
+
+/* Badge styling */
+.badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.badge-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Form control styling */
+.form-control {
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  padding: 8px 12px;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* City trends section */
+.city-trends {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+} 
