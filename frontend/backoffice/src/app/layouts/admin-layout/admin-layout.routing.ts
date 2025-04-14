@@ -13,6 +13,11 @@ import {FoodListComponent} from "../../mic3/food-list/food-list.component";
 import {AddStockItemComponent} from "../../mic2/add-stock-item/add-stock-item.component";
 import {ListStockComponent} from "../../mic2/list-stock/list-stock.component";
 import {UpdateStockComponent} from "../../mic2/update-stock/update-stock.component";
+import { MicComponent } from '../../mic/mic.component'; // Import the MicComponent
+import { AddMicComponent } from '../../mic/add-mic/add-mic.component';
+import { EditMicComponent } from '../../mic/edit-mic/edit-mic.component';
+
+
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -70,5 +75,9 @@ export const AdminLayoutRoutes: Routes = [
     {path: 'stock/add', component: AddStockItemComponent },
     {path:'stock/list', component: ListStockComponent },
     { path: 'stock/edit/:id', component: UpdateStockComponent },
+    { path: 'mic', component: MicComponent },
+    { path: 'mic/add', component: AddMicComponent }, // Add a new competition
+    { path: 'mic/edit/:id', component: EditMicComponent }, // Edit a competition
+
 
 ];

@@ -22,6 +22,8 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 
 import {AddStockItemComponent} from "../../mic2/add-stock-item/add-stock-item.component";
 import {ListStockComponent} from "../../mic2/list-stock/list-stock.component";
+import { MicComponent } from '../../mic/mic.component'; // Import the MicComponent
+
 
 @NgModule({
   imports: [
@@ -48,6 +50,8 @@ import {ListStockComponent} from "../../mic2/list-stock/list-stock.component";
     NotificationsComponent,
     UpgradeComponent,
     FoodListComponent,
+    MicComponent, 
+    
 
 
       AddStockItemComponent,ListStockComponent

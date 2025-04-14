@@ -18,7 +18,7 @@
         <module name="microservice1" />
         <module name="gateway" />
       </profile>
-      <profile name="Annotation profile for microservice5" enabled="true">
+      <profile name="Annotation profile for microservice4" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />

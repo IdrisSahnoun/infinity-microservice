@@ -1,0 +1,73 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-primary">
+            <h4 class="card-title">Competitions</h4>
+            <p class="card-category">List of all active competitions in the system</p>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12 text-right">
+                <a [routerLink]="['/mic/add']" class="btn btn-primary">
+                  <i class="material-icons">add</i> Add Competition
+                </a>
+              </div>
+            </div>
+            
+            <!-- Single search field -->
+            <div class="row mt-3">
+              <div class="col-md-12">
+                <div class="form-group has-search">
+                  <span class="material-icons form-control-feedback">search</span>
+                  <input type="text" class="form-control" placeholder="Search competitions..." 
+                         [(ngModel)]="searchFilters.name" (input)="searchMics()">
+                  <button *ngIf="searchFilters.name" class="btn btn-link btn-just-icon" (click)="resetSearch()">
+                    <i class="material-icons">clear</i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div *ngIf="mics.length === 0" class="alert alert-info">
+              <span>No competitions found. Click "Add Competition" to create one.</span>
+            </div>
+
+            <div class="table-responsive" *ngIf="mics.length > 0">
+              <table class="table">
+                <thead class="text-primary">
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Location</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th class="text-right">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let mic of mics">
+                    <td>{{ mic.name }}</td>
+                    <td>{{ mic.description }}</td>
+                    <td>{{ mic.location }}</td>
+                    <td>{{ mic.startDate | date:'medium' }}</td>
+                    <td>{{ mic.endDate | date:'medium' }}</td>
+                    <td class="text-right">
+                      <a [routerLink]="['/mic/edit', mic.id]" class="btn btn-sm btn-primary">
+                        <i class="material-icons">edit</i>
+                      </a>
+                      <button (click)="deleteMic(mic.id)" class="btn btn-sm btn-danger">
+                        <i class="material-icons">delete</i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
