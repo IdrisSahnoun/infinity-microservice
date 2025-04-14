@@ -5,25 +5,24 @@ import org.springframework.stereotype.Service;
 import tn.esprit.microservice5.entities.Abonnement;
 import tn.esprit.microservice5.repositories.AbonnementRepo;
 
-
+import java.time.LocalDate;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 
 @Service
 public class AbonnementService {
 
-    private final AbonnementRepo abonnementRepo;
-
     @Autowired
-    public AbonnementService(AbonnementRepo abonnementRepo) {
-        this.abonnementRepo = abonnementRepo;
-    }
+    private AbonnementRepo abonnementRepo;
 
     public List<Abonnement> getAllAbonnements() {
         return abonnementRepo.findAll();
     }
 
-    public Abonnement getAbonnementById(Long id) {
-        return abonnementRepo.findById(id).orElse(null);
+    public Optional<Abonnement> getAbonnementById(Long id) {
+        return abonnementRepo.findById(id);
     }
 
     public Abonnement createAbonnement(Abonnement abonnement) {
@@ -31,16 +30,37 @@ public class AbonnementService {
     }
 
     public Abonnement updateAbonnement(Long id, Abonnement abonnementDetails) {
-        if (!abonnementRepo.existsById(id)) {
-            throw new RuntimeException("Salle not found with id: " + id);
-        }
-        abonnementDetails.setId(id);
-        return abonnementRepo.save(abonnementDetails);    }
+        Abonnement abonnement = abonnementRepo.findById(id)
+                .orElseThrow(() -> new RuntimeException("Abonnement not found"));
+        abonnement.setDate_debut(abonnementDetails.getDate_debut());
+        abonnement.setDate_fin(abonnementDetails.getDate_fin());
+        abonnement.setMontant(abonnementDetails.getMontant());
+        return abonnementRepo.save(abonnement);
+    }
 
     public void deleteAbonnement(Long id) {
-        if (!abonnementRepo.existsById(id)) {
-            throw new RuntimeException("Salle not found with id: " + id);
-        }
         abonnementRepo.deleteById(id);
     }
+
+    public Map<String, Object> getAbonnementStats() {
+        List<Abonnement> abonnements = abonnementRepo.findAll();
+        double totalMontant = abonnements.stream().mapToDouble(Abonnement::getMontant).sum();
+        double averageMontant = abonnements.isEmpty() ? 0 : totalMontant / abonnements.size();
+
+        // Add statistics grouped by montant
+        List<Object[]> montantStatsRaw = abonnementRepo.countAbonnementsByMontant();
+        Map<Double, Long> montantStats = new HashMap<>();
+        for (Object[] row : montantStatsRaw) {
+            Double montant = (Double) row[0];
+            Long count = (Long) row[1];
+            montantStats.put(montant, count);
+        }
+
+        Map<String, Object> stats = new HashMap<>();
+        stats.put("totalMontant", totalMontant);
+        stats.put("averageMontant", averageMontant);
+        stats.put("montantStats", montantStats); // Include grouped stats
+        return stats;
+    }
+
 }

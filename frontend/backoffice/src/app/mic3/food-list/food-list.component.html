@@ -1,0 +1,134 @@
+<div class="card">
+    <div class="card-header card-header-primary">
+        <h4 class="card-title">Food List</h4>
+        <p class="card-category">Available Food Items</p>
+    </div>
+    <div class="card-body">
+        <!-- Add Create Button -->
+        <button class="btn btn-success btn-sm mb-3" (click)="openCreateDialog()">
+            <i class="material-icons">add</i> Add New Food
+        </button>
+
+        <div *ngIf="loading" class="text-center">
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+
+        <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+
+        <div class="table-responsive" *ngIf="!loading && !error">
+            <table class="table">
+                <thead class="text-primary">
+                <tr>
+                    <th>Name</th>
+                    <th>Calories</th>
+                    <th>Protein (g)</th>
+                    <th>Carbs (g)</th>
+                    <th>Fat (g)</th>
+                    <th>Serving Size</th>
+                    <th>Unit</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let food of foods">
+                    <td>{{ food.name }}</td>
+                    <td>{{ food.calories }}</td>
+                    <td>{{ food.protein }}</td>
+                    <td>{{ food.carbohydrates }}</td>
+                    <td>{{ food.fat }}</td>
+                    <td>{{ food.serving_size }}</td>
+                    <td>{{ food.serving_unit }}</td>
+                    <td>
+                        <button class="btn btn-primary btn-sm mr-2" (click)="openEditDialog(food)">
+                            <i class="material-icons">edit</i>
+                        </button>
+                        <button class="btn btn-danger btn-sm" (click)="confirmDelete(food)">
+                            <i class="material-icons">delete</i>
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div *ngIf="!loading && !error && foods.length === 0" class="text-center">
+            <p>No food items available.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal backdrop -->
+<div class="modal-backdrop fade show" *ngIf="showModal || showDeleteModal"></div>
+
+<!-- Create/Edit Modal -->
+<div class="modal show d-block" tabindex="-1" role="dialog" *ngIf="showModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{ editMode ? 'Edit Food' : 'Add New Food' }}</h5>
+                <button type="button" class="close" (click)="closeModal()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" [(ngModel)]="currentFood.name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="calories">Calories</label>
+                        <input type="number" class="form-control" id="calories" [(ngModel)]="currentFood.calories" name="calories" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="protein">Protein (g)</label>
+                        <input type="number" class="form-control" id="protein" [(ngModel)]="currentFood.protein" name="protein" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="carbs">Carbohydrates (g)</label>
+                        <input type="number" class="form-control" id="carbs" [(ngModel)]="currentFood.carbohydrates" name="carbohydrates" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fat">Fat (g)</label>
+                        <input type="number" class="form-control" id="fat" [(ngModel)]="currentFood.fat" name="fat" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="serving_size">Serving Size</label>
+                        <input type="number" class="form-control" id="serving_size" [(ngModel)]="currentFood.serving_size" name="serving_size" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="serving_unit">Serving Unit</label>
+                        <input type="text" class="form-control" id="serving_unit" [(ngModel)]="currentFood.serving_unit" name="serving_unit" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="closeModal()">Cancel</button>
+                <button type="button" class="btn btn-primary" (click)="saveFood()">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Delete Confirmation Modal -->
+<div class="modal show d-block" tabindex="-1" role="dialog" *ngIf="showDeleteModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirm Delete</h5>
+                <button type="button" class="close" (click)="closeDeleteModal()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete "{{ currentFood?.name }}"?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="closeDeleteModal()">Cancel</button>
+                <button type="button" class="btn btn-danger" (click)="deleteFood()">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>

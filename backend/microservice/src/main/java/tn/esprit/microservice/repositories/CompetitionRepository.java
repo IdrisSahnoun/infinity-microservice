@@ -1,10 +1,8 @@
 package tn.esprit.microservice.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import tn.esprit.microservice.entities.Competition;
 
-import java.util.List;
-import java.util.Optional;
-
-public interface CompetitionRepository extends JpaRepository<Competition, Long> {
+public interface CompetitionRepository extends JpaRepository<Competition, Long>, JpaSpecificationExecutor<Competition> {
 }

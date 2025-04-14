@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Set;
 
 @RestController
-@RequestMapping("/api/sports")
+@RequestMapping("/mic1/sports")
 public class SportController {
     
     private final SportService sportService;

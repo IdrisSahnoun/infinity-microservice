@@ -1,0 +1,70 @@
+<!-- Products Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+      <h6 class="section-title bg-white text-center text-primary px-3">Equipment</h6>
+      <h1 class="mb-5">Our Gym Equipment</h1>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div *ngIf="loading" class="text-center py-5">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <p class="mt-2">Loading equipment...</p>
+    </div>
+
+    <!-- Error Message -->
+    <div *ngIf="error" class="alert alert-danger text-center" role="alert">
+      {{ error }}
+      <button class="btn btn-sm btn-outline-danger ms-3" (click)="fetchProducts()">Retry</button>
+    </div>
+
+    <!-- Products Grid -->
+    <div *ngIf="!loading && !error" class="row g-4 justify-content-center">
+      <div *ngFor="let product of products" class="col-lg-4 col-md-6 wow fadeInUp"
+           [attr.data-wow-delay]="(0.1 * ($index % 3))+'s'">
+        <div class="product-item bg-light">
+          <div class="position-relative overflow-hidden">
+            <img class="img-fluid w-100"
+                 [src]="'../../assets/img/equipment-' + (($index % 6) + 1) + '.jpg'"
+
+                 [src]="'../../assets/img/gym_eq.jpg'"
+                 [alt]="product.itemName">
+            <div class="product-overlay">
+              <span class="badge bg-primary position-absolute top-0 end-0 mt-2 me-2">
+                Stock: {{product.quantity}}
+              </span>
+            </div>
+          </div>
+          <div class="text-center p-4">
+            <h3 class="mb-0">${{product.price.toFixed(2)}}</h3>
+            <h5 class="mb-3 mt-2">{{product.itemName}}</h5>
+            <p class="mb-4">{{product.description}}</p>
+          </div>
+          <div class="d-flex border-top">
+            <small class="flex-fill text-center border-end py-2">
+              <i class="fa fa-tag text-primary me-2"></i>{{product.itemCode}}
+            </small>
+            <small class="flex-fill text-center py-2">
+              <i class="fa fa-box text-primary me-2"></i>
+              <span *ngIf="product.quantity > product.reorderThreshold" class="text-success">In Stock</span>
+              <span *ngIf="product.quantity <= product.reorderThreshold" class="text-warning">Low Stock</span>
+            </small>
+          </div>
+          <div class="text-center p-3">
+            <button class="btn btn-primary py-2 px-4">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- No Products Found -->
+      <div *ngIf="products.length === 0" class="col-12 text-center py-5">
+        <i class="fa fa-box-open fa-4x text-muted mb-4"></i>
+        <h4>No equipment available at the moment</h4>
+        <p>Please check back later for our gym equipment inventory.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Products End -->

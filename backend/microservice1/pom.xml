@@ -11,8 +11,8 @@
 	<groupId>esprit</groupId>
 	<artifactId>microservice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>microservice</name>
-	<description>microservice</description>
+	<name>microservice1</name>
+	<description>microservice1</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -28,7 +28,19 @@
 	</scm>
 	<properties>
 		<java.version>17</java.version>
+		<spring-cloud.version>2024.0.1</spring-cloud.version>
 	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -66,6 +78,10 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
 	</dependencies>
 
