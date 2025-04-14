@@ -65,3 +65,69 @@
   background-color: #e64a19;
   border-color: #e64a19;
 } 
+  position: relative;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 3px;
+  background-color: #ff5722;
+  margin-top: 10px;
+}
+
+.section-description {
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.facility-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%;
+}
+
+.facility-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.facility-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.facility-card .card-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.facility-card .location,
+.facility-card .price {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.facility-features {
+  margin-top: 15px;
+}
+
+.facility-features .badge {
+  margin-right: 5px;
+  padding: 6px 10px;
+  font-weight: 400;
+}
+
+.input-group .btn-primary {
+  background-color: #ff5722;
+  border-color: #ff5722;
+}
+
+.input-group .btn-primary:hover {
+  background-color: #e64a19;
+  border-color: #e64a19;
+} 

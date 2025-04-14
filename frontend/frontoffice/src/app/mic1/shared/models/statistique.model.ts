@@ -9,18 +9,19 @@ export interface SalleStatistics {
 }
 
 export interface SalleRecommendation {
-  ville: string;
-  prixMax: number;
-  sportsPreferes: string[];
-  sallesRecommandees: SalleDeSport[];
+  salles: SalleDeSport[];
+  criteres: {
+    ville: string;
+    prixMax: number;
+    sportsPreferes: string[];
+  };
 }
 
 export interface SportTendance {
-  sport: string;
+  nom: string;
   nombreSalles: number;
-  popularite: number;
 }
 
 export interface TendancesParVille {
   [ville: string]: SportTendance[];
-} 
+}

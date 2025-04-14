@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="afd91bf4-2328-4c66-b57b-11519fad4bc9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/config/gateway.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/config/gateway.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/config/microservice1.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/config/microservice1.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice1/src/main/java/tn/esprit/microservice1/Microservice1Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice1/src/main/java/tn/esprit/microservice1/Microservice1Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/tn/esprit/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/tn/esprit/gateway/GatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice1/src/main/java/tn/esprit/microservice1/controllers/StatistiqueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice1/src/main/java/tn/esprit/microservice1/controllers/StatistiqueController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/backoffice/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/backoffice/src/environments/environment.prod.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/frontoffice/src/app/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/frontoffice/src/app/header/header.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +210,7 @@
       <workItem from="1744032680789" duration="4419000" />
       <workItem from="1744116449106" duration="711000" />
       <workItem from="1744396061304" duration="185000" />
-      <workItem from="1744568535054" duration="7703000" />
+      <workItem from="1744568535054" duration="10553000" />
     </task>
     <servers />
   </component>

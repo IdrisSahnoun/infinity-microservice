@@ -76,3 +76,80 @@
     </div>
   </div>
 </section> 
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="section-title">Sports Facilities</h2>
+      <p class="section-description">Find the perfect sports facility for your needs</p>
+    </div>
+  </div>
+
+  <!-- Search and Filters -->
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search by name or description..." 
+               [(ngModel)]="searchTerm" (keyup.enter)="search()">
+        <div class="input-group-append">
+          <button class="btn btn-primary" (click)="search()">
+            <i class="fa fa-search"></i> Search
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <select class="form-control" [(ngModel)]="selectedVille" (change)="filterByVille(selectedVille)">
+        <option value="">All Cities</option>
+        <option *ngFor="let ville of villes" [value]="ville">{{ ville }}</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Loading and Error Messages -->
+  <div *ngIf="loading" class="text-center my-5">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <p class="mt-2">Loading sports facilities...</p>
+  </div>
+
+  <div *ngIf="error" class="alert alert-danger">
+    {{ error }}
+  </div>
+
+  <!-- Facilities List -->
+  <div *ngIf="!loading && filteredSalles.length === 0" class="text-center my-5">
+    <p>No sports facilities found matching your criteria.</p>
+  </div>
+
+  <div *ngIf="!loading && filteredSalles.length > 0" class="row">
+    <div class="col-md-4" *ngFor="let salle of filteredSalles">
+      <div class="card facility-card mb-4">
+        <img [src]="salle.imageUrl || 'assets/images/default-facility.jpg'" class="card-img-top" alt="{{ salle.nom }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ salle.nom }}</h5>
+          <p class="card-text location">
+            <i class="fa fa-map-marker"></i> {{ salle.ville }}, {{ salle.codePostal }}
+          </p>
+          <p class="card-text price">
+            <i class="fa fa-tag"></i> Average Price: {{ salle.prixMoyenAbonnement | currency }}
+          </p>
+          <p class="card-text">{{ salle.description | slice:0:100 }}...</p>
+          
+          <div class="facility-features mb-3">
+            <span class="badge bg-light text-dark me-1" *ngIf="salle.parkingDisponible">
+              <i class="fa fa-car"></i> Parking
+            </span>
+            <span class="badge bg-light text-dark me-1" *ngIf="salle.vestiairesDisponibles">
+              <i class="fa fa-lock"></i> Lockers
+            </span>
+            <span class="badge bg-light text-dark me-1" *ngIf="salle.douchesDisponibles">
+              <i class="fa fa-shower"></i> Showers
+            </span>
+          </div>
+          
+          <a [routerLink]="['/mic1/salles', salle.id]" class="btn btn-primary">View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 

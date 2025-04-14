@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StatistiqueService } from '../../shared/services/statistique.service';
 import { SalleStatistics, TendancesParVille, SportTendance } from '../../shared/models/statistique.model';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-statistiques-dashboard',
@@ -12,13 +13,17 @@ export class StatistiquesDashboardComponent implements OnInit {
   error = '';
   statistics: SalleStatistics | null = null;
   tendancesParVille: TendancesParVille | null = null;
+  apiUrl: string;
+  envApiUrl: string = environment.apiUrl;
+  timestamp: Date = new Date();
   
   constructor(private statistiqueService: StatistiqueService) { 
     console.log('StatistiquesDashboardComponent initialized');
+    this.apiUrl = `${environment.apiUrl}/api/statistiques`;
   }
 
   ngOnInit(): void {
-    console.log('StatistiquesDashboardComponent.ngOnInit()');
+    console.log('StatistiquesDashboardComponent ngOnInit');
     this.loadStatistics();
     this.loadTrends();
   }
@@ -58,6 +63,26 @@ export class StatistiquesDashboardComponent implements OnInit {
     );
   }
   
+  // Helper methods for template
+  getTopCities(): {name: string, count: number}[] {
+    if (!this.statistics || !this.statistics.sallesParVille) {
+      return [];
+    }
+    
+    return Object.entries(this.statistics.sallesParVille)
+      .map(([name, count]) => ({ name, count }))
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 5);
+  }
+  
+  getCityNames(): string[] {
+    if (!this.tendancesParVille) {
+      return ['Paris', 'Lyon', 'Marseille', 'Bordeaux', 'Lille']; // Fallback
+    }
+    
+    return Object.keys(this.tendancesParVille);
+  }
+  
   // Fallback method to load dummy data if API fails
   private loadDummyData(): void {
     console.log('Loading dummy statistics data...');
@@ -77,47 +102,43 @@ export class StatistiquesDashboardComponent implements OnInit {
     this.loading = false;
   }
   
-  // Fallback method to load dummy trends if API fails
   private loadDummyTrends(): void {
     console.log('Loading dummy trends data...');
     this.tendancesParVille = {
       'Paris': [
-        { sport: 'Tennis', nombreSalles: 45, popularite: 0.32 },
-        { sport: 'Football', nombreSalles: 38, popularite: 0.28 },
-        { sport: 'Swimming', nombreSalles: 22, popularite: 0.15 }
+        { nom: 'Football', nombreSalles: 35 },
+        { nom: 'Tennis', nombreSalles: 28 },
+        { nom: 'Basketball', nombreSalles: 22 }
       ],
       'Lyon': [
-        { sport: 'Football', nombreSalles: 32, popularite: 0.35 },
-        { sport: 'Basketball', nombreSalles: 25, popularite: 0.25 },
-        { sport: 'Tennis', nombreSalles: 18, popularite: 0.20 }
+        { nom: 'Swimming', nombreSalles: 25 },
+        { nom: 'Football', nombreSalles: 20 },
+        { nom: 'Yoga', nombreSalles: 15 }
       ],
       'Marseille': [
-        { sport: 'Football', nombreSalles: 30, popularite: 0.40 },
-        { sport: 'Rugby', nombreSalles: 18, popularite: 0.22 },
-        { sport: 'Swimming', nombreSalles: 15, popularite: 0.18 }
+        { nom: 'Football', nombreSalles: 22 },
+        { nom: 'Basketball', nombreSalles: 18 },
+        { nom: 'Swimming', nombreSalles: 14 }
       ]
     };
   }
 
-  // Helper method to get top sports from statistics
-  get topSports(): string[] {
-    return this.statistics?.sportsPlusOfferts || [];
-  }
-
-  // Helper method to get cities with the most facilities
-  get topCities(): [string, number][] {
-    if (!this.statistics?.sallesParVille) return [];
+  // Add a method to handle city selection
+  onCitySelect(city: string): void {
+    console.log(`City selected: ${city}`);
+    // After a city is selected, we should display its trends
+    this.selectedCity = city;
     
-    return Object.entries(this.statistics.sallesParVille)
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 5);
+    if (this.tendancesParVille && this.tendancesParVille[city]) {
+      console.log(`Trends found for ${city}:`, this.tendancesParVille[city]);
+      this.cityTrends = this.tendancesParVille[city];
+    } else {
+      console.log(`No trends found for ${city}`);
+      this.cityTrends = [];
+    }
   }
   
-  // Helper method to get trend data for a specific city
-  getTrendsForCity(city: string): SportTendance[] {
-    if (!this.tendancesParVille || !this.tendancesParVille[city]) {
-      return [];
-    }
-    return this.tendancesParVille[city];
-  }
+  // Add property to track selected city and its trends
+  selectedCity: string = '';
+  cityTrends: any[] = [];
 } 
