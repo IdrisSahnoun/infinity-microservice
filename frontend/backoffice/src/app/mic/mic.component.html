@@ -16,19 +16,19 @@
               </div>
             </div>
             
-            <!-- Single search field -->
-            <div class="row mt-3">
-              <div class="col-md-12">
-                <div class="form-group has-search">
-                  <span class="material-icons form-control-feedback">search</span>
-                  <input type="text" class="form-control" placeholder="Search competitions..." 
-                         [(ngModel)]="searchFilters.name" (input)="searchMics()">
-                  <button *ngIf="searchFilters.name" class="btn btn-link btn-just-icon" (click)="resetSearch()">
-                    <i class="material-icons">clear</i>
-                  </button>
-                </div>
-              </div>
-            </div>
+            <!-- Single search field that searches all columns -->
+<div class="row mt-3">
+    <div class="col-md-12">
+      <div class="form-group has-search">
+        <span class="material-icons form-control-feedback">search</span>
+        <input type="text" class="form-control" placeholder="Search all fields..." 
+               [(ngModel)]="searchQuery" (input)="searchMics()">
+        <button *ngIf="searchQuery" class="btn btn-link btn-just-icon" (click)="resetSearch()">
+          <i class="material-icons">clear</i>
+        </button>
+      </div>
+    </div>
+  </div>
 
             <div *ngIf="mics.length === 0" class="alert alert-info">
               <span>No competitions found. Click "Add Competition" to create one.</span>
