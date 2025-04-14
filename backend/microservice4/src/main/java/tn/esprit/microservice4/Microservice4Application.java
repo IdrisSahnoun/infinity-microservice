@@ -8,6 +8,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 @EnableAspectJAutoProxy
 @SpringBootApplication
+
+
 public class Microservice4Application {
 
 	public static void main(String[] args) {

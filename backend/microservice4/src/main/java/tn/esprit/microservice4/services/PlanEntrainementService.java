@@ -13,28 +13,23 @@ public class PlanEntrainementService {
 
     private final PlanEntrainementRepository planEntrainementRepository;
 
-    // Constructor for injecting PlanEntrainementRepository
     @Autowired
     public PlanEntrainementService(PlanEntrainementRepository planEntrainementRepository) {
         this.planEntrainementRepository = planEntrainementRepository;
     }
 
-    // Ajouter un plan d'entraînement
     public PlanEntrainement savePlanEntrainement(PlanEntrainement planEntrainement) {
         return planEntrainementRepository.save(planEntrainement);
     }
 
-    // Récupérer tous les plans d'entraînement
     public List<PlanEntrainement> getAllPlans() {
         return planEntrainementRepository.findAll();
     }
 
-    // Récupérer un plan par ID
     public Optional<PlanEntrainement> getPlanById(int id) {
         return planEntrainementRepository.findById(id);
     }
 
-    // Mettre à jour un plan
     public PlanEntrainement updatePlanEntrainement(int id, PlanEntrainement updatedPlan) {
         Optional<PlanEntrainement> optionalPlan = planEntrainementRepository.findById(id);
         if (optionalPlan.isPresent()) {
@@ -48,7 +43,6 @@ public class PlanEntrainementService {
         }
     }
 
-    // Supprimer un plan
     public void deletePlanEntrainement(int id) {
         planEntrainementRepository.deleteById(id);
     }

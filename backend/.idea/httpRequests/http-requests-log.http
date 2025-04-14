@@ -3,6 +3,143 @@ User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.1.1
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
+<> 2025-04-14T050555.200.json
+
+###
+
+GET http://localhost:8088/api/events
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-14T050408.200.json
+
+###
+
+GET http://localhost:8088/api/events
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-14T050327.200.json
+
+###
+
+GET http://localhost:8088/api/events'
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-14T050226.404.json
+
+###
+
+GET http://localhost:8084/plans/suggest/2
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-14T030749.200.json
+
+###
+
+GET http://localhost:8084/plans/list/actifs
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-14T023811.200.json
+
+###
+
+GET http://localhost:8084/plans/list/actifs
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-14T023805.200.json
+
+###
+
+GET http://localhost:8084/plans/list
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-14T023730.200.json
+
+###
+
+GET http://localhost:8084/plans/1
+Content-Type: app
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-14T022150.500.json
+
+###
+
+PUT http://localhost:8084/plans/marquer-seance-terminee/1
+Content-Type: application/x-www-form-urlenc
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+PUT http://localhost:8084/plans/marquer-seance-terminee/1
+Content-Type: application/x-www-form-urlenc
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+PUT http://localhost:8084/plans/update/1
+Content-Type: application/json
+Content-Length: 136
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "id": 1,
+  "titre": "Plan Musculation Intensif",
+  "description": "Programme de 6 semaines avec focus sur la force",
+  "duree": 42
+}
+
+<> 2025-04-14T003124.200.json
+
+###
+
+PUT http://localhost:8084/plans/update/1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2025-04-14T002858.400.json
+
+###
+
+GET http://localhost:8088/api/events
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-13T223715.200.json
+
+###
+
+GET http://localhost:8088/api/events
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
 <> 2025-04-13T201214.503.json
 
 ###

@@ -1,0 +1,9 @@
+<h2>Créer un événement</h2>
+<form (ngSubmit)="createEvent()">
+  <input type="text" [(ngModel)]="event.name" name="name" placeholder="Nom" required class="form-control mb-2" />
+  <textarea [(ngModel)]="event.description" name="description" placeholder="Description" class="form-control mb-2"></textarea>
+  <input type="date" [(ngModel)]="event.date" name="date" required class="form-control mb-2" />
+  <input type="text" [(ngModel)]="event.location" name="location" placeholder="Lieu" required class="form-control mb-2" />
+  <input type="number" [(ngModel)]="event.max_participants" name="max_participants" placeholder="Max Participants" required class="form-control mb-2" />
+  <button type="submit" class="btn btn-primary">Créer</button>
+</form>

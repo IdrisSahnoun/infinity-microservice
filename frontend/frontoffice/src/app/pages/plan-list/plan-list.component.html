@@ -1,0 +1,29 @@
+<div class="p-6 bg-gray-50 min-h-screen">
+    <h2 class="text-4xl font-bold mb-8 text-gray-800">Plans d'Entraînement</h2>
+    
+    <!-- Barre de Recherche -->
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      (input)="searchPlans()"
+      placeholder="Rechercher un plan..."
+      class="border border-gray-300 rounded-lg px-4 py-3 w-full md:w-96 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 mb-6"
+    />
+    
+    <!-- Liste des Plans -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div *ngFor="let plan of filteredPlans" class="bg-white shadow-md rounded-lg p-6 transition-transform hover:scale-105">
+        <h3 class="text-xl font-semibold text-gray-800">{{ plan.titre }}</h3>
+        <p class="text-gray-600 mt-2 line-clamp-2">{{ plan.description }}</p>
+        <p class="mt-4 font-medium text-gray-700">Durée : {{ plan.duree }} jours</p>
+        <a [routerLink]="['/details', plan.id]" class="inline-block mt-3 text-blue-600 hover:text-blue-700 font-medium transition-colors duration-300">
+          Voir détails
+        </a>
+      </div>
+    </div>
+  
+    <!-- Message si aucun plan trouvé -->
+    <div *ngIf="filteredPlans.length === 0" class="text-center text-gray-500 mt-8">
+      <p>Aucun plan correspondant à votre recherche.</p>
+    </div>
+  </div>

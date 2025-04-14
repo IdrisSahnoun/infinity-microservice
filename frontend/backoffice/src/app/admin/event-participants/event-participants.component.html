@@ -1,0 +1,6 @@
+<h2>Participants de l'événement: {{ event?.name }}</h2>
+<ul>
+  <li *ngFor="let p of event?.participants">
+    {{ p.member_name }} (ID: {{ p.member_id }})
+  </li>
+</ul>

@@ -13,6 +13,10 @@ import {FoodListComponent} from "../../mic3/food-list/food-list.component";
 import {AddStockItemComponent} from "../../mic2/add-stock-item/add-stock-item.component";
 import {ListStockComponent} from "../../mic2/list-stock/list-stock.component";
 import {UpdateStockComponent} from "../../mic2/update-stock/update-stock.component";
+import { PlansComponent } from 'app/plans/plans.component';
+import { AdminEventsComponent } from 'app/admin/admin-events/admin-events.component';
+import { CreateEventComponent } from 'app/admin/create-event/create-event.component';
+import { EventParticipantsComponent } from 'app/admin/event-participants/event-participants.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -70,5 +74,9 @@ export const AdminLayoutRoutes: Routes = [
     {path: 'stock/add', component: AddStockItemComponent },
     {path:'stock/list', component: ListStockComponent },
     { path: 'stock/edit/:id', component: UpdateStockComponent },
+   { path: 'plans', component: PlansComponent }, // Missing comma was here
+   { path: 'admin/events', component: AdminEventsComponent },
+{ path: 'admin/events/create', component: CreateEventComponent },
+{ path: 'admin/events/:id/participants', component: EventParticipantsComponent },
 
 ];

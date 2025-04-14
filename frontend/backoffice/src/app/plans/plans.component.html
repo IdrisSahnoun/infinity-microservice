@@ -1,0 +1,66 @@
+<div class="container">
+    <h2>Gestion des Plans d'entraînement</h2>
+  
+    <!-- Formulaire -->
+    <div class="form">
+      <input [(ngModel)]="newPlan.titre" placeholder="Titre" />
+      <input [(ngModel)]="newPlan.description" placeholder="Description" />
+      <input [(ngModel)]="newPlan.duree" type="number" placeholder="Durée" />
+  
+      <button 
+        [disabled]="!newPlan.titre || !newPlan.description || newPlan.duree <= 0"
+        (click)="editMode ? updatePlan() : addPlan()">
+        {{ editMode ? 'Modifier' : 'Ajouter' }}
+      </button>
+      <button *ngIf="editMode" (click)="resetForm()">Annuler</button>
+    </div>
+  
+    <!-- Outils -->
+    <div class="tools">
+      <input [(ngModel)]="keyword" placeholder="Rechercher..." (input)="search()" />
+      <select [(ngModel)]="sortBy" (change)="sort()">
+        <option value="titre">Trier par titre</option>
+        <option value="duree">Trier par durée</option>
+      </select>
+    </div>
+  
+    <!-- Statistiques -->
+    <div class="stats">
+      <p><strong>Total:</strong> {{ stats.totalPlans }}</p>
+      <p><strong>Durée Moyenne:</strong> {{ stats.dureeMoyenne | number:'1.0-0' }}</p>
+      <p><strong>Min:</strong> {{ stats.dureeMin }}</p>
+      <p><strong>Max:</strong> {{ stats.dureeMax }}</p>
+    </div>
+  
+    <!-- Tableau -->
+    <table>
+      <thead>
+        <tr>
+          <th>Titre</th>
+          <th>Description</th>
+          <th>Durée</th>
+          <th>Actif</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let plan of plans">
+          <td>{{ plan.titre }}</td>
+          <td>{{ plan.description }}</td>
+          <td>{{ plan.duree }} j</td>
+          <td>{{ plan.actif ? 'Oui' : 'Non' }}</td>
+          <td>
+            <button class="btn btn-warning" (click)="startEdit(plan)">✏️</button>
+            <button class="btn btn-danger" (click)="deletePlan(plan.id)">🗑️</button>
+            <button class="btn btn-success" (click)="toggleActif(plan.id)">
+              {{ plan.actif ? '🔴' : '🟢' }}
+            </button>
+          </td>
+        </tr>
+        <tr *ngIf="plans.length === 0">
+          <td colspan="5" style="text-align:center;">Aucun plan trouvé.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

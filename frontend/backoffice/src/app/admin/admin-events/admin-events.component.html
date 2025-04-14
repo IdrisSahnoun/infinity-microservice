@@ -1,0 +1,24 @@
+<h2>Liste des Événements</h2>
+<a routerLink="/admin/events/create" class="btn btn-success mb-3">Créer un événement</a>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Date</th>
+      <th>Lieu</th>
+      <th>Participants</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let event of events">
+      <td>{{ event.name }}</td>
+      <td>{{ event.date | date }}</td>
+      <td>{{ event.location }}</td>
+      <td>
+        <a [routerLink]="['/admin/events', event.event_id, 'participants']">
+          {{ event.participants.length }} participant(s)
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
