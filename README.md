@@ -1,83 +1,109 @@
-# **Infinity Gym** 🏋️‍♂️
+# 🥗 Nutrition and Diet Recommendation Microservice
 
-A **Spring Boot** microservices-based gym management system designed to handle competitions, training plans, subscriptions, members, gym locations, and nutrition tracking.
+## 📋 Overview
+This microservice (microservice3) is part of the Infinity Microservice architecture, focusing on nutritional management and personalized diet recommendations. It provides APIs for managing food data and generating dietary recommendations based on user metrics (BMI, calorie needs, etc.).
 
-## **Project Overview** 📋
-Infinity Gym is a modular system built using **microservices architecture**, where each service handles a specific domain:
-1. **Competition** – Manage gym challenges and tournaments.
-2. **Plan d'entrainement** – Create and assign workout plans.
-3. **Abonnements** – Handle membership subscriptions and payments.
-4. **Membre** – Manage member profiles and data.
-5. **Salles** – Track gym locations and facilities.
-6. **Nutrition** – Provide diet plans and meal tracking.
+## ✨ Features
+- 🍽️ Food database management (CRUD operations)
+- 📊 BMI (Body Mass Index) calculation
+- 🔥 Personalized daily calorie requirement calculation
+- 🍳 Diet recommendations based on user profiles
+- 🧮 Food suggestion algorithm based on nutritional needs
 
-## **Technologies Used** 🛠️
-- **Backend:** Spring Boot, Spring Cloud, Spring Data JPA
-- **Database:** MySQL / PostgreSQL (or any preferred DB)
-- **API Documentation:** Swagger/OpenAPI
-- **Service Discovery:** Eureka Server
-- **API Gateway:** Spring Cloud Gateway
-- **Communication:** REST APIs, Feign Client
-- **Authentication:** Spring Security & JWT (if applicable)
+## 🛠️ Technology Stack
+- **Backend**: ☕ Java with Spring Boot
+- **Database**: 💾 JPA/Hibernate with relational database
+- **API**: 🌐 RESTful endpoints
+- **Dependencies**: 📦 Lombok for reduced boilerplate code
 
-## **Team Members** 👥
-| Name | Role | Microservice |
-|------|------|--------------|
-| [Idris] | Backend Developer | Competition |
-| [Nessim] | Backend Developer | Plan d'entrainement |
-| [Hedy] | Backend Developer | Abonnements |
-| [Mahdi] | Backend Developer | Membre |
-| [Taha] | Backend Developer | Salles |
-| [Ayoub] | Backend Developer | Nutrition |
+## 📝 Data Models
+- **Food**: 🍎 Nutritional information for food items (calories, macronutrients, serving sizes)
+- **DietRecommendation**: 📋 Complete diet plan with BMI metrics and food suggestions
+- **ImcRequest**: 📝 Input model containing user metrics (height, weight, age, gender, activity level)
 
-## **Getting Started** 🚀
-### **Prerequisites**
-- Java 17+
-- Maven
-- Docker
-- MySQL
+## 🔌 API Endpoints
 
-### **Installation & Setup**
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/mic3/food` | GET | 📋 Retrieve all food items |
+| `/mic3/food/{id}` | GET | 🔍 Get food by ID |
+| `/mic3/food` | POST | ➕ Create a new food item |
+| `/mic3/food/{id}` | PUT | 🔄 Update an existing food item |
+| `/mic3/food/{id}` | DELETE | 🗑️ Delete a food item |
+| `/mic3/food/diet-recommendation` | POST | 💪 Generate personalized diet recommendations |
+| `/mic3/food/bulk` | POST | 📚 Bulk create multiple food items |
+
+## 🧠 Core Algorithms
+1. **BMI Calculation**: 📏 `weight / (height * height)`
+2. **BMI Categorization**: 📊 Underweight, Normal weight, Overweight, Obese
+3. **Daily Calorie Requirement**: 🔥 Harris-Benedict formula with activity level multipliers
+4. **Food Suggestion Algorithm**: 🍽️ Selects appropriate foods to match caloric targets
+
+## ⚙️ Setup & Installation
+
 1. Clone the repository:
-   ```bash
+   ```
    git clone https://github.com/IdrisSahnoun/infinity-microservice.git
    ```
-2. Navigate to each microservice and run:
-   ```bash
-   mvn clean install
+
+2. Checkout the microservice3-ayoub branch:
    ```
-3. Configure databases in `application.yml` for each service.
-4. Run the **Eureka Server** first , then other services.
+   git checkout microservice3-ayoub
+   ```
 
-### **Running the Project**
-- Run each microservice individually, or use:
-  ```bash
-  docker-compose up --build
-  ```
-- Access APIs via the API Gateway .
+3. Build the project:
+   ```
+   ./mvnw clean install
+   ```
 
-## **API Documentation** 📚
-Each microservice has its own Swagger docs:
-- Access via: `http://localhost:<port>/swagger-ui.html`
+4. Run the application:
+   ```
+   ./mvnw spring-boot:run
+   ```
 
-## **Project Structure** 📂
+## 🔧 Configuration
+The application uses standard Spring Boot configuration in `application.properties` or `application.yml`. Ensure database connection details are properly configured.
+
+## 🚀 Example Usage
+
+### Calculate BMI and Get Diet Recommendations
 ```
-infinity-gym/
-├── competition-service/
-├── trainingplan-service/
-├── subscription-service/
-├── member-service/
-├── gym-service/
-├── nutrition-service/
-├── api-gateway/ (if applicable)
-└── eureka-server/ (if applicable)
+POST /mic3/food/diet-recommendation
+{
+  "height": 1.75,
+  "weight": 70.0,
+  "age": 30,
+  "gender": "male",
+  "activityLevel": "moderate"
+}
 ```
 
-## **Contributing** 🤝
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/your-feature`).
-3. Commit your changes (`git commit -m 'Add some feature'`).
-4. Push to the branch (`git push origin feature/your-feature`).
-5. Open a **Pull Request**.
+Response:
+```json
+{
+  "bmi": 22.86,
+  "bmiCategory": "Normal weight",
+  "dailyCalories": 2650.25,
+  "recommendedFoods": [
+    {
+      "id": 1,
+      "name": "Chicken Breast",
+      "calories": 165.0,
+      "protein": 31.0,
+      "carbohydrates": 0.0,
+      "fat": 3.6,
+      "serving_size": 100.0,
+      "serving_unit": "g"
+    },
+    ...
+  ],
+  "totalCaloriesInMeal": 2200.75
+}
+```
 
+## ✍️ Author
+- Ayoub Touti (@touti-ayoub)
+- Created: 2023-04-14
 
+## 📜 License
+MIT
