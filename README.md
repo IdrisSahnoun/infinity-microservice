@@ -66,7 +66,7 @@ microservice1/
 - `PUT /api/salles/{id}` - Met à jour une salle
 - `DELETE /api/salles/{id}` - Supprime une salle
 
-### Statistiques et Analyses (`/api/statistiques`)
+### Fonctionnalités Avancées :Statistiques et Analyses (`/api/statistiques`)
 - `GET /api/statistiques/salles` - Statistiques générales des salles
   ```json
   {
