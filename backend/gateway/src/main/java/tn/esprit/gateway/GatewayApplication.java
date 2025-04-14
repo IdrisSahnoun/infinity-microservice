@@ -40,9 +40,6 @@ public class GatewayApplication {
 				.build();
 	}
 
-				
-	
-
 	@Bean(name = "corsWebFilterrrr")
 	public CorsWebFilter corsWebFilter() {
 		CorsConfiguration config = new CorsConfiguration();
