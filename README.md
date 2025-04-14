@@ -66,6 +66,9 @@ The application uses standard Spring Boot configuration in `application.properti
 
 ## 🚀 Example Usage
 
+![image](https://github.com/user-attachments/assets/ed4987b6-484c-44fd-bba0-69cbb55f9732)
+
+
 ### Calculate BMI and Get Diet Recommendations
 ```
 POST /mic3/food/diet-recommendation
