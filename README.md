@@ -27,7 +27,7 @@ Location: backend/config-server
 
 Microservices
 Subscription Service (backend/subscription-service)
-Port: 8086
+Port: 8085
 
 Role: Manages subscription plans, user subscriptions, and payment history
 
