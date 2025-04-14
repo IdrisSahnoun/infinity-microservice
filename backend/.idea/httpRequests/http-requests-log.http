@@ -1,3 +1,21 @@
+GET http://localhost:8088/list
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-14T064445.404.json
+
+###
+
+GET http://localhost:8080/list
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-14T064430.200.json
+
+###
+
 GET http://localhost:8088/api/events
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.1.1
 Accept-Encoding: br, deflate, gzip, x-gzip

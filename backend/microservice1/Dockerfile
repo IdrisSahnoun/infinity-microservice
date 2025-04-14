@@ -1,5 +1,13 @@
-FROM openjdk:17
-#utilise le meme port que le fichier application.properties
+FROM openjdk:17-jdk-slim
+
+# Set a working directory (optional but good practice)
+WORKDIR /app
+
+# Copy the JAR file (using wildcard to avoid hardcoding the name)
+COPY target/*.jar microservice1.jar
+
+# Document the port (optional, since docker-compose.yml already maps it)
 EXPOSE 8081
-ADD target/microservice1-0.0.1-SNAPSHOT.jar microservice1.jar
-ENTRYPOINT ["java", "-jar","microservice1.jar"]
+
+# Run the application
+ENTRYPOINT ["java", "-jar", "microservice1.jar"]

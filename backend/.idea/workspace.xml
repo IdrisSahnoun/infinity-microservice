@@ -5,47 +5,117 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afd91bf4-2328-4c66-b57b-11519fad4bc9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eureka/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/tn/esprit/gateway/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice1/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/mic/add-mic/add-mic.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/mic/add-mic/add-mic.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/mic/add-mic/add-mic.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/mic/add-mic/add-mic.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/mic/edit-mic/edit-mic.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/mic/edit-mic/edit-mic.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/mic/edit-mic/edit-mic.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/mic/edit-mic/edit-mic.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/mic/mic.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/mic/mic.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/mic/mic.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/mic/mic.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/mic5/mic5.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/mic5/mic5.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/mic5/mic5.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/mic5/mic5.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/microservice1/microservice1.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/microservice1/microservice1.routing.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/microservice1/models/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/microservice1/models/salle-de-sport.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/microservice1/models/sport.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/microservice1/salles/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/microservice1/salles/salle-form/salle-form.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/microservice1/salles/salle-form/salle-form.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/microservice1/salles/salle-form/salle-form.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/microservice1/salles/salle-list/salle-list.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/microservice1/salles/salle-list/salle-list.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/microservice1/salles/salle-list/salle-list.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/microservice1/services/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/microservice1/services/salle-de-sport.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/microservice1/services/sport.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/microservice1/sports/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/microservice1/sports/sport-form/sport-form.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/microservice1/sports/sport-form/sport-form.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/microservice1/sports/sport-form/sport-form.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/microservice1/sports/sport-list/sport-list.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/microservice1/sports/sport-list/sport-list.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/microservice1/sports/sport-list/sport-list.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/models/mic.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/services/mic.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/services/mic.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/frontoffice/src/app/core/interceptors/stats-api.interceptor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/frontoffice/src/app/mic1/salles-de-sport/salles-list/salles-list.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/frontoffice/src/app/mic1/salles-de-sport/salles-list/salles-list.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/frontoffice/src/app/mic1/salles-de-sport/salles-list/salles-list.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/frontoffice/src/app/mic1/shared/models/salle-de-sport.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/frontoffice/src/app/mic1/shared/models/sport.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/frontoffice/src/app/mic1/shared/models/statistique.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/frontoffice/src/app/mic1/shared/services/salle-de-sport.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/frontoffice/src/app/mic1/shared/services/sport.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/frontoffice/src/app/mic1/shared/services/statistique.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/frontoffice/src/app/mic1/statistiques/dashboard/statistiques-dashboard.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/frontoffice/src/app/mic1/statistiques/dashboard/statistiques-dashboard.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/frontoffice/src/app/mic1/statistiques/dashboard/statistiques-dashboard.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/frontoffice/src/app/mic5/abonnement/abonnement.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/frontoffice/src/app/mic5/abonnement/abonnement.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/frontoffice/src/app/mic5/abonnement/abonnement.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/frontoffice/src/app/mic5/abonnement/abonnement.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/frontoffice/src/environments/environment.prod.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/frontoffice/src/environments/environment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/frontoffice/src/service/mic5/abonnement.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/frontoffice/src/service/mic5/abonnement.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hs_err_pid21584.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../replay_pid21584.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/config/gateway.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/config/gateway.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/config/microservice1.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/config/microservice1.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/config/microservice5.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/config/microservice5.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/target/classes/config/gateway.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/target/classes/config/gateway.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/target/classes/config/microservice1.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/target/classes/config/microservice1.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/target/classes/config/microservice3.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/target/classes/config/microservice3.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/target/classes/config/microservice5.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/target/classes/config/microservice5.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/src/main/java/tn/esprit/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/tn/esprit/gateway/GatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice4/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice4/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice4/src/main/java/tn/esprit/microservice4/Microservice4Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice4/src/main/java/tn/esprit/microservice4/Microservice4Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice4/src/main/java/tn/esprit/microservice4/controllers/PlanEntrainementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice4/src/main/java/tn/esprit/microservice4/controllers/PlanEntrainementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice4/src/main/java/tn/esprit/microservice4/entities/PlanEntrainement.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice4/src/main/java/tn/esprit/microservice4/entities/PlanEntrainement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice4/src/main/java/tn/esprit/microservice4/entities/Progression.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice4/src/main/java/tn/esprit/microservice4/repositories/ProgressionRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice4/src/main/java/tn/esprit/microservice4/services/PlanEntrainementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice4/src/main/java/tn/esprit/microservice4/services/PlanEntrainementService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice4/src/main/java/tn/esprit/microservice4/services/ProgressionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservice4/src/main/java/tn/esprit/microservice4/services/ProgressionServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice/src/main/java/tn/esprit/microservice/entities/Competition.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice/src/main/java/tn/esprit/microservice/entities/Competition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice1/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/microservice1/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice1/src/main/java/tn/esprit/microservice1/Microservice1Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice1/src/main/java/tn/esprit/microservice1/Microservice1Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice1/src/main/java/tn/esprit/microservice1/controllers/StatistiqueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice1/src/main/java/tn/esprit/microservice1/controllers/StatistiqueController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice1/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservice1/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservice4/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservice4/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-microservice/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/src/main/java/com/datmt/keycloak/springbootauth/config/KeycloakProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/src/main/java/com/datmt/keycloak/springbootauth/config/KeycloakSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-microservice/src/main/java/com/datmt/keycloak/springbootauth/config/KeycloakSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/src/main/java/com/datmt/keycloak/springbootauth/http/requests/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-microservice/src/main/java/com/datmt/keycloak/springbootauth/http/requests/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/classes/tn/esprit/tpfoyer17/TpFoyer17Application.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/classes/tn/esprit/tpfoyer17/configurations/AOPConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/classes/tn/esprit/tpfoyer17/configurations/SpringDocConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/classes/tn/esprit/tpfoyer17/controllers/AuthController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/classes/tn/esprit/tpfoyer17/entities/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/classes/tn/esprit/tpfoyer17/repositories/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/classes/tn/esprit/tpfoyer17/services/auth/CustomUserDetailsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/classes/tn/esprit/tpfoyer17/services/auth/JwtAuthenticationFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/classes/tn/esprit/tpfoyer17/services/auth/JwtUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/classes/tn/esprit/tpfoyer17/services/auth/SecurityConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/user-microservice/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/user-microservice/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/surefire-reports/TEST-tn.esprit.tpfoyer17.TpFoyer17ApplicationTests.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/surefire-reports/tn.esprit.tpfoyer17.TpFoyer17ApplicationTests.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-microservice/target/test-classes/tn/esprit/tpfoyer17/TpFoyer17ApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice5/src/main/java/tn/esprit/microservice5/controllers/AbonnementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice5/src/main/java/tn/esprit/microservice5/controllers/AbonnementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice5/src/main/java/tn/esprit/microservice5/entities/Abonnement.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice5/src/main/java/tn/esprit/microservice5/entities/Abonnement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice5/src/main/java/tn/esprit/microservice5/repositories/AbonnementRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice5/src/main/java/tn/esprit/microservice5/repositories/AbonnementRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice5/src/main/java/tn/esprit/microservice5/services/AbonnementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice5/src/main/java/tn/esprit/microservice5/services/AbonnementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice5/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservice5/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/backoffice/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/backoffice/angular.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/backoffice/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/backoffice/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/backoffice/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/backoffice/src/app/app.routing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/app.routing.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/backoffice/src/app/components/sidebar/sidebar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/components/sidebar/sidebar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/backoffice/src/app/layouts/admin-layout/admin-layout.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/layouts/admin-layout/admin-layout.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/backoffice/src/app/layouts/admin-layout/admin-layout.routing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/backoffice/src/app/layouts/admin-layout/admin-layout.routing.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/backoffice/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/backoffice/src/environments/environment.prod.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/backoffice/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/backoffice/src/environments/environment.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/frontoffice/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/frontoffice/angular.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/frontoffice/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/frontoffice/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/frontoffice/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/frontoffice/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/frontoffice/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/frontoffice/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/frontoffice/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/frontoffice/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/frontoffice/src/app/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/frontoffice/src/app/header/header.component.html" afterDir="false" />
@@ -84,9 +154,9 @@
     }
     }</component>
   <component name="KubernetesApiPersistence">{}</component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -120,6 +190,7 @@
     "Maven.eureka [install].executor": "Run",
     "Maven.gateway [clean].executor": "Run",
     "Maven.gateway [install].executor": "Run",
+    "Maven.gateway [validate].executor": "Run",
     "Maven.microservice [clean].executor": "Run",
     "Maven.microservice [install].executor": "Run",
     "Maven.microservice2 [clean].executor": "Run",
@@ -148,9 +219,10 @@
     "Spring Boot.KeycloakSpringbootAuth (1).executor": "Run",
     "Spring Boot.KeycloakSpringbootAuth.executor": "Run",
     "Spring Boot.Microservice4Application.executor": "Run",
+    "Spring Boot.Microservice5Application.executor": "Run",
     "Spring Boot.MicroserviceApplication.executor": "Run",
     "Spring Boot.TpFoyer17Application.executor": "Run",
-    "git-widget-placeholder": "mic4-nessim",
+    "git-widget-placeholder": "Merging mic4-nessim",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/pc/Desktop/micro/infinity-microservice/backend",
@@ -191,7 +263,7 @@
     <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" executionIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="generated-requests | #6" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" executionIdentifier="#6" index="6" runType="Run single request">
+    <configuration name="generated-requests | #10" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" executionIdentifier="#10" index="10" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="generated-requests | #7" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" executionIdentifier="#7" index="7" runType="Run single request">
@@ -278,11 +350,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.generated-requests | #10" />
         <item itemvalue="HTTP Request.generated-requests | #8" />
         <item itemvalue="HTTP Request.generated-requests | #1" />
         <item itemvalue="HTTP Request.generated-requests | #7" />
         <item itemvalue="HTTP Request.generated-requests | #9" />
-        <item itemvalue="HTTP Request.generated-requests | #6" />
       </list>
     </recent_temporary>
   </component>

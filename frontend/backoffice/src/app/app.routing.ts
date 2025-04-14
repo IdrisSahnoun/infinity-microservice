@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { PlansComponent } from './plans/plans.component';
+import { Microservice1Routes } from './microservice1/microservice1.routing';
 
 
 const routes: Routes = [
@@ -19,14 +20,11 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () =>
-          import('./layouts/admin-layout/admin-layout.module').then(
-            (m) => m.AdminLayoutModule
-          ),
+        loadChildren: () => import('./layouts/admin-layout/admin-layout.module').then(m => m.AdminLayoutModule)
       },
-    ],
-  },
- 
+      ...Microservice1Routes
+    ]
+  }
 ];
 
 @NgModule({

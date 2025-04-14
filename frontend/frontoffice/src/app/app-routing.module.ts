@@ -5,11 +5,13 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { CoursesComponent } from './courses/courses.component';
 import { OurTeamComponent } from './our-team/our-team.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
+import { StatistiquesDashboardComponent } from './mic1/statistiques/dashboard/statistiques-dashboard.component';
 import {AboutUsComponent} from "./about-us/about-us.component";
 import {ContactComponent} from "./contact/contact.component";
 import {ProductsComponent} from "./mic2/products/products.component";
 import {FoodListComponent} from "./mic3/food-list/food-list.component";
 import {BmiCalculatorComponent} from "./mic3/bmi-calculator/bmi-calculator.component";
+import { AbonnementComponent } from './mic5/abonnement/abonnement.component';
 
 import { PlanDetailsComponent } from './pages/plan-details/plan-details.component';
 import { PlanListComponent } from './pages/plan-list/plan-list.component';
@@ -26,9 +28,12 @@ const routes: Routes = [
   { path: 'testemonial', component: TestimonialComponent },
   { path: 'aboutus', component: AboutUsComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'mic1/statistiques/dashboard', component: StatistiquesDashboardComponent },
   {path : 'products', component: ProductsComponent },
   {path: 'food-list', component: FoodListComponent},
   { path: 'bmi-calculator', component: BmiCalculatorComponent },
+  { path: 'abonnements', component: AbonnementComponent },
+
 
   //{ path: 'plans', component: PlansComponent }, // Nouvelle route pour les plans
   //{ path: 'progression/:id', component: ProgressionComponent }, // Nouvelle route pour la progression

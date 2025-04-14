@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router'; // Importer RouterModule
-import { CommonModule } from '@angular/common'; // Importer CommonModule
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { NgOptimizedImage } from '@angular/common';
 
 // Importation des composants
@@ -19,6 +19,7 @@ import { OurTeamComponent } from './our-team/our-team.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { ContactComponent } from './contact/contact.component';
+import { StatistiquesDashboardComponent } from './mic1/statistiques/dashboard/statistiques-dashboard.component';
 import { ProductsComponent } from './mic2/products/products.component';
 import { FoodListComponent } from './mic3/food-list/food-list.component';
 import { BmiCalculatorComponent } from './mic3/bmi-calculator/bmi-calculator.component';
@@ -26,6 +27,7 @@ import { PlanListComponent } from './pages/plan-list/plan-list.component';
 import { PlanDetailsComponent } from './pages/plan-details/plan-details.component';
 import { EventListComponent } from './components/event-list/event-list.component';
 import { EventRegisterComponent } from './components/event-register/event-register.component';
+import { AbonnementComponent } from './mic5/abonnement/abonnement.component'; // ✅ Ajouté ici
 
 @NgModule({
   declarations: [
@@ -40,6 +42,7 @@ import { EventRegisterComponent } from './components/event-register/event-regist
     TestimonialComponent,
     NotfoundComponent,
     ContactComponent,
+    StatistiquesDashboardComponent,
     ProductsComponent,
     FoodListComponent,
     BmiCalculatorComponent,
@@ -47,17 +50,16 @@ import { EventRegisterComponent } from './components/event-register/event-regist
     PlanDetailsComponent,
     EventListComponent,
     EventRegisterComponent,
-
-    
+    AbonnementComponent, // ✅ Obligatoire pour utiliser ngModel dans ce composant
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    FormsModule, // ✅ Import requis pour ngModel
     ReactiveFormsModule,
     HttpClientModule,
-    CommonModule, // Ajoutez CommonModule
-    RouterModule.forRoot([]), // Configurez les routes principales ici
+    CommonModule,
+    RouterModule.forRoot([]),
     NgOptimizedImage,
   ],
   providers: [],

@@ -18,6 +18,14 @@ export const ROUTES: RouteInfo[] = [
     { path: '/upgrade', title: 'Upgrade to PRO',  icon:'unarchive', class: 'active-pro' },
     { path: '/plans', title: 'Plans', icon: 'assignment', class: '' }, // Example new route
     { path: '/progression/:id', title: 'Progression', icon: 'trending_up', class: '' } ,
+    { path: '/typography', title: 'Typography',  icon:'library_books', class: '' },
+    { path: '/mic', title: 'Competitions',  icon: 'emoji_events', class: '' }, 
+    { path: '/icons', title: 'Icons',  icon:'bubble_chart', class: '' },
+    { path: '/maps', title: 'Maps',  icon:'location_on', class: '' },
+    { path: '/notifications', title: 'Notifications',  icon:'notifications', class: '' },
+    { path: '/upgrade', title: 'Upgrade to PRO',  icon:'unarchive', class: 'active-pro' },
+    { path: '/microservice1/salles', title: 'Sports Facilities',  icon:'fitness_center', class: '' },
+    { path: '/microservice1/sports', title: 'Sports',  icon:'sports', class: '' },
 ];
 @Component({
   selector: 'app-sidebar',

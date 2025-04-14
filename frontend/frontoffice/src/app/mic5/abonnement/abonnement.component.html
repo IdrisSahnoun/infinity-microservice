@@ -1,0 +1,112 @@
+<div class="container">
+    <h1>Liste des abonnements</h1>
+  
+    <!-- Affichage des erreurs -->
+    <div *ngIf="errorMessage" class="alert alert-danger">
+      {{ errorMessage }}
+    </div>
+  
+    <!-- Formulaire pour créer un nouvel abonnement -->
+    <form (ngSubmit)="createAbonnement()">
+        <div class="form-group">
+            <label for="date_debut">Date de début :</label>
+            <input
+                type="date"
+                id="date_debut"
+                class="form-control"
+                [(ngModel)]="newAbonnement.date_debut"
+                name="date_debut"
+                required
+            />
+        </div>
+        <div class="form-group">
+            <label for="date_fin">Date de fin :</label>
+            <input
+                type="date"
+                id="date_fin"
+                class="form-control"
+                [(ngModel)]="newAbonnement.date_fin"
+                name="date_fin"
+                required
+            />
+        </div>
+        <div class="form-group">
+            <label for="montant">Montant :</label>
+            <input
+                type="number"
+                id="montant"
+                class="form-control"
+                [(ngModel)]="newAbonnement.montant"
+                name="montant"
+                required
+            />
+        </div>
+        <button type="submit" class="btn btn-primary mt-2">Créer</button>
+    </form>
+  
+    <!-- Liste des abonnements -->
+<ul class="list-group mt-4">
+    <li *ngFor="let abonnement of abonnements" class="list-group-item d-flex justify-content-between align-items-center">
+      <div>
+        <strong>Date de début :</strong> {{ abonnement.date_debut }} <br />
+        <strong>Date de fin :</strong> {{ abonnement.date_fin }} <br />
+        <strong>Montant :</strong> {{ abonnement.montant }} €
+      </div>
+      <div>
+        <button class="btn btn-primary btn-sm" (click)="editAbonnement(abonnement)">Modifier</button>
+        <button class="btn btn-danger btn-sm" (click)="deleteAbonnement(abonnement.id!)">Supprimer</button>
+      </div>
+    </li>
+  </ul>
+  
+  <!-- Formulaire pour modifier un abonnement -->
+<form *ngIf="isEditing" (ngSubmit)="updateAbonnement(newAbonnement.id!)">
+  <div class="form-group">
+    <label for="date_debut">Date de début :</label>
+    <input
+      type="date"
+      id="date_debut"
+      class="form-control"
+      [(ngModel)]="newAbonnement.date_debut"
+      name="date_debut"
+      required
+    />
+  </div>
+  <div class="form-group">
+    <label for="date_fin">Date de fin :</label>
+    <input
+      type="date"
+      id="date_fin"
+      class="form-control"
+      [(ngModel)]="newAbonnement.date_fin"
+      name="date_fin"
+      required
+    />
+  </div>
+  <div class="form-group">
+    <label for="montant">Montant :</label>
+    <input
+      type="number"
+      id="montant"
+      class="form-control"
+      [(ngModel)]="newAbonnement.montant"
+      name="montant"
+      required
+    />
+  </div>
+  <button type="submit" class="btn btn-success mt-2">Mettre à jour</button>
+  <button type="button" class="btn btn-secondary mt-2" (click)="cancelEdit()">Annuler</button>
+</form>
+<div class="stats mt-4">
+    <h3>Statistiques des abonnements</h3>
+    <div *ngIf="stats">
+      <p><strong>Total des abonnements :</strong> {{ stats.total }}</p>
+      <p><strong>Montant total :</strong> {{ stats.montant_total }} €</p>
+      <p><strong>Abonnements actifs :</strong> {{ stats.actifs }}</p>
+      <p><strong>Abonnements expirés :</strong> {{ stats.expires }}</p>
+    </div>
+    <div *ngIf="!stats">
+      <p>Chargement des statistiques...</p>
+    </div>
+  </div>
+  </div>

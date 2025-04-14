@@ -1,0 +1,103 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-primary">
+            <h4 class="card-title">{{ isEdit ? 'Edit' : 'Add' }} Sport</h4>
+            <p class="card-category">{{ isEdit ? 'Update the information of an existing sport' : 'Add a new sport to the system' }}</p>
+          </div>
+          <div class="card-body">
+            <div class="alert alert-danger" *ngIf="error">
+              {{ error }}
+            </div>
+            
+            <div *ngIf="loading" class="text-center my-4">
+              <div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+            
+            <form [formGroup]="sportForm" (ngSubmit)="onSubmit()" *ngIf="!loading">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="nom">Name</label>
+                    <input type="text" class="form-control" id="nom" formControlName="nom">
+                    <div class="text-danger" *ngIf="sportForm.get('nom').invalid && (sportForm.get('nom').dirty || sportForm.get('nom').touched)">
+                      Name is required
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="niveauDifficulte">Difficulty Level</label>
+                    <select class="form-control" id="niveauDifficulte" formControlName="niveauDifficulte">
+                      <option *ngFor="let level of difficultyLevels" [value]="level">{{ level }}</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="dureeMoyenne">Average Duration (minutes)</label>
+                    <input type="number" class="form-control" id="dureeMoyenne" formControlName="dureeMoyenne">
+                    <div class="text-danger" *ngIf="sportForm.get('dureeMoyenne').invalid && (sportForm.get('dureeMoyenne').dirty || sportForm.get('dureeMoyenne').touched)">
+                      Valid duration is required
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="prixAbonnementMensuel">Monthly Subscription Price</label>
+                    <input type="number" class="form-control" id="prixAbonnementMensuel" formControlName="prixAbonnementMensuel">
+                    <div class="text-danger" *ngIf="sportForm.get('prixAbonnementMensuel').invalid && (sportForm.get('prixAbonnementMensuel').dirty || sportForm.get('prixAbonnementMensuel').touched)">
+                      Valid price is required
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea class="form-control" id="description" rows="3" formControlName="description"></textarea>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="equipementNecessaire">Required Equipment</label>
+                    <textarea class="form-control" id="equipementNecessaire" rows="2" formControlName="equipementNecessaire"></textarea>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="imageUrl">Image URL</label>
+                    <input type="text" class="form-control" id="imageUrl" formControlName="imageUrl">
+                  </div>
+                </div>
+              </div>
+              
+              <div class="text-right">
+                <button type="button" class="btn btn-default" [routerLink]="['/microservice1/sports']">Cancel</button>
+                <button type="submit" class="btn btn-primary" [disabled]="sportForm.invalid || submitting">
+                  <span *ngIf="submitting" class="spinner-border spinner-border-sm mr-1"></span>
+                  {{ isEdit ? 'Update' : 'Create' }}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
