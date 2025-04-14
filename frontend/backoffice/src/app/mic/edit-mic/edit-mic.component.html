@@ -1,0 +1,61 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-primary">
+            <h4 class="card-title">Edit Competition</h4>
+            <p class="card-category">Update competition details</p>
+          </div>
+          <div class="card-body">
+            <form (ngSubmit)="onSubmit()" #micForm="ngForm">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Name</label>
+                    <input type="text" class="form-control" [(ngModel)]="mic.name" name="name" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Location</label>
+                    <input type="text" class="form-control" [(ngModel)]="mic.location" name="location" required>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Description</label>
+                    <textarea class="form-control" rows="4" [(ngModel)]="mic.description" name="description" required></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Start Date</label>
+                    <input type="datetime-local" class="form-control" [(ngModel)]="mic.startDate" name="startDate" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>End Date</label>
+                    <input type="datetime-local" class="form-control" [(ngModel)]="mic.endDate" name="endDate" required>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <button type="submit" class="btn btn-primary pull-right">Update Competition</button>
+                  <a [routerLink]="['/mic']" class="btn btn-default">Cancel</a>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

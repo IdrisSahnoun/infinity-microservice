@@ -9,9 +9,11 @@ declare interface RouteInfo {
 }
 export const ROUTES: RouteInfo[] = [
     { path: '/dashboard', title: 'Dashboard',  icon: 'dashboard', class: '' },
+    {path:'/stock/list', title: 'Stocks',  icon: 'list', class: '' },
     { path: '/user-profile', title: 'User Profile',  icon:'person', class: '' },
     { path: '/table-list', title: 'Table List',  icon:'content_paste', class: '' },
     { path: '/typography', title: 'Typography',  icon:'library_books', class: '' },
+    { path: '/mic', title: 'Competitions',  icon: 'emoji_events', class: '' }, 
     { path: '/icons', title: 'Icons',  icon:'bubble_chart', class: '' },
     { path: '/maps', title: 'Maps',  icon:'location_on', class: '' },
     { path: '/notifications', title: 'Notifications',  icon:'notifications', class: '' },
@@ -19,7 +21,6 @@ export const ROUTES: RouteInfo[] = [
     { path: '/microservice1/salles', title: 'Sports Facilities',  icon:'fitness_center', class: '' },
     { path: '/microservice1/sports', title: 'Sports',  icon:'sports', class: '' },
 ];
-
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',

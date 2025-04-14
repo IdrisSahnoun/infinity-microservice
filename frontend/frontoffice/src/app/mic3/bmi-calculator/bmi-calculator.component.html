@@ -1,0 +1,129 @@
+<!-- src/app/mic3/bmi-calculator/bmi-calculator.component.html -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+      <h6 class="section-title bg-white text-center text-primary px-3">Nutrition</h6>
+      <h1 class="mb-5">BMI & Diet Calculator</h1>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="calculator-form bg-light p-4 rounded shadow-sm">
+          <h4 class="mb-4 text-center">Calculate Your BMI & Get Food Recommendations</h4>
+
+          <form [formGroup]="calculatorForm" (ngSubmit)="onSubmit()">
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Height (meters)</label>
+                <input type="number" step="0.01" class="form-control" formControlName="height"
+                       [ngClass]="{ 'is-invalid': submitted && f['height']?.errors }">
+                <div *ngIf="submitted && f['height']?.errors" class="invalid-feedback">
+                  <div *ngIf="f['height']?.errors?.['required']">Height is required</div>
+                  <div *ngIf="f['height']?.errors?.['min'] || f['height']?.errors?.['max']">Height must be between 0.5 and 2.5 meters</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Weight (kg)</label>
+                <input type="number" step="0.1" class="form-control" formControlName="weight"
+                       [ngClass]="{ 'is-invalid': submitted && f['weight']?.errors }">
+                <div *ngIf="submitted && f['weight']?.errors" class="invalid-feedback">
+                  <div *ngIf="f['weight']?.errors?.['required']">Weight is required</div>
+                  <div *ngIf="f['weight']?.errors?.['min'] || f['weight']?.errors?.['max']">Weight must be between 20 and 300 kg</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Age</label>
+              <input type="number" class="form-control" formControlName="age"
+                     [ngClass]="{ 'is-invalid': submitted && f['age']?.errors }">
+              <div *ngIf="submitted && f['age']?.errors" class="invalid-feedback">
+                <div *ngIf="f['age']?.errors?.['required']">Age is required</div>
+                <div *ngIf="f['age']?.errors?.['min'] || f['age']?.errors?.['max']">Age must be between 18 and 100</div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Gender</label>
+              <div class="d-flex">
+                <div class="form-check me-4">
+                  <input class="form-check-input" type="radio" formControlName="gender" value="male" id="male">
+                  <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" formControlName="gender" value="female" id="female">
+                  <label class="form-check-label" for="female">Female</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label">Activity Level</label>
+              <select class="form-select" formControlName="activityLevel">
+                <option *ngFor="let level of activityLevels" [value]="level.value">{{ level.label }}</option>
+              </select>
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary btn-lg" [disabled]="loading">
+                <span *ngIf="loading" class="spinner-border spinner-border-sm me-1"></span>
+                Calculate
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results Section -->
+    <div *ngIf="recommendation" class="mt-5 wow fadeInUp" data-wow-delay="0.3s">
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-4">
+          <div class="bmi-result text-center p-4 bg-light rounded shadow-sm">
+            <h3 class="text-primary mb-2">Your BMI</h3>
+            <h2 class="mb-2">{{ recommendation.bmi | number:'1.1-1' }}</h2>
+            <div class="badge bg-primary py-2 px-3 fs-6">{{ recommendation.bmiCategory }}</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="calories-result text-center p-4 bg-light rounded shadow-sm">
+            <h3 class="text-primary mb-2">Daily Calories</h3>
+            <h2 class="mb-2">{{ recommendation.dailyCalories | number:'1.0-0' }}</h2>
+            <div class="badge bg-success py-2 px-3 fs-6">Recommended Intake</div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="text-center mb-4">Recommended Foods</h3>
+
+      <div class="row g-4 justify-content-center">
+        <div *ngFor="let food of recommendation.recommendedFoods" class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="course-item bg-light">
+            <div class="text-center p-4 pb-0">
+              <h3 class="mb-0">{{ food.calories }} cal</h3>
+              <div class="mb-3">
+                <span class="badge bg-primary">{{ food.serving_size }} {{ food.serving_unit }}</span>
+              </div>
+              <h5 class="mb-4">{{ food.name }}</h5>
+            </div>
+            <div class="d-flex border-top">
+              <small class="flex-fill text-center border-end py-2"><i class="fa fa-drumstick-bite text-primary me-2"></i>Protein: {{ food.protein }}g</small>
+              <small class="flex-fill text-center border-end py-2"><i class="fa fa-bread-slice text-primary me-2"></i>Carbs: {{ food.carbohydrates }}g</small>
+              <small class="flex-fill text-center py-2"><i class="fa fa-cheese text-primary me-2"></i>Fat: {{ food.fat }}g</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <div class="badge bg-info p-3 fs-5">
+          Total calories in recommended meal: {{ recommendation.totalCaloriesInMeal | number:'1.0-0' }}
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="error" class="alert alert-danger text-center mt-4" role="alert">
+      {{ error }}
+    </div>
+  </div>
+</div>

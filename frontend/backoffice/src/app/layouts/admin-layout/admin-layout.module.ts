@@ -19,6 +19,14 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
 import { Microservice1Module } from '../../microservice1/microservice1.module';
 
+import {FoodListComponent} from "../../mic3/food-list/food-list.component";
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+
+import {AddStockItemComponent} from "../../mic2/add-stock-item/add-stock-item.component";
+import {ListStockComponent} from "../../mic2/list-stock/list-stock.component";
+import { MicComponent } from '../../mic/mic.component'; // Import the MicComponent
+
+
 @NgModule({
   imports: [
     CommonModule,
@@ -32,6 +40,7 @@ import { Microservice1Module } from '../../microservice1/microservice1.module';
     MatSelectModule,
     MatTooltipModule,
     Microservice1Module,
+    NgbModule
   ],
   declarations: [
     DashboardComponent,
@@ -42,6 +51,12 @@ import { Microservice1Module } from '../../microservice1/microservice1.module';
     MapsComponent,
     NotificationsComponent,
     UpgradeComponent,
+    FoodListComponent,
+    MicComponent, 
+    
+
+
+      AddStockItemComponent,ListStockComponent
   ]
 })
 

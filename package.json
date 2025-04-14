@@ -1,0 +1,12 @@
+{
+  "name": "infinity-microservice",
+  "version": "1.0.0",
+  "description": "This project is a microservices-based application that implements a comprehensive system for managing various aspects of sports and competitions. The architecture follows modern microservices patterns and includes multiple specialized services working together.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

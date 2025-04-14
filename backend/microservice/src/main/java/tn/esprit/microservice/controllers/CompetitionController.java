@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import tn.esprit.microservice.entities.Competition;
 import tn.esprit.microservice.services.ICompetitionService;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -51,5 +52,13 @@ public class CompetitionController {
     @GetMapping("/test")
     public String test() {
         return "Competition API is working!";
+    }
+    @GetMapping("/search")
+    public List<Competition> searchCompetitions(
+            @RequestParam(required = false) String name,
+            @RequestParam(required = false) LocalDateTime startDate,
+            @RequestParam(required = false) LocalDateTime endDate,
+            @RequestParam(required = false) String location) {
+        return competitionService.searchCompetitions(name, startDate, endDate, location);
     }
 }

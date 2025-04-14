@@ -1,0 +1,44 @@
+<!-- src/app/mic3/food-list/food-list.component.html -->
+<!-- Food Items Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+      <h6 class="section-title bg-white text-center text-primary px-3">Nutrition</h6>
+      <h1 class="mb-5">Food List</h1>
+    </div>
+
+    <div *ngIf="loading" class="text-center mb-4">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <div *ngIf="error" class="alert alert-danger text-center" role="alert">
+      {{ error }}
+    </div>
+
+    <div *ngIf="!loading && !error && foods.length === 0" class="text-center mb-4">
+      <p>No foods available</p>
+    </div>
+
+    <div *ngIf="!loading && !error && foods.length > 0" class="row g-4 justify-content-center">
+      <div *ngFor="let food of foods" class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="course-item bg-light">
+          <div class="text-center p-4 pb-0">
+            <h3 class="mb-0">{{ food.calories }} cal</h3>
+            <div class="mb-3">
+              <span class="badge bg-primary">{{ food.serving_size }} {{ food.serving_unit }}</span>
+            </div>
+            <h5 class="mb-4">{{ food.name }}</h5>
+          </div>
+          <div class="d-flex border-top">
+            <small class="flex-fill text-center border-end py-2"><i class="fa fa-drumstick-bite text-primary me-2"></i>Protein: {{ food.protein }}g</small>
+            <small class="flex-fill text-center border-end py-2"><i class="fa fa-bread-slice text-primary me-2"></i>Carbs: {{ food.carbohydrates }}g</small>
+            <small class="flex-fill text-center py-2"><i class="fa fa-cheese text-primary me-2"></i>Fat: {{ food.fat }}g</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Food Items End -->

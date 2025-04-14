@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import {NgOptimizedImage} from "@angular/common";
 import { BannerComponent } from './banner/banner.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { CoursesComponent } from './courses/courses.component';
@@ -14,6 +15,12 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { ContactComponent } from './contact/contact.component';
 import { StatistiquesDashboardComponent } from './mic1/statistiques/dashboard/statistiques-dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductsComponent } from './mic2/products/products.component';
+import {HttpClientModule} from "@angular/common/http";
+import { FoodListComponent } from './mic3/food-list/food-list.component';
+import { BmiCalculatorComponent } from './mic3/bmi-calculator/bmi-calculator.component';
+import {ReactiveFormsModule} from "@angular/forms";
+
 
 @NgModule({
   declarations: [
@@ -29,11 +36,17 @@ import { HttpClientModule } from '@angular/common/http';
     NotfoundComponent,
     ContactComponent,
     StatistiquesDashboardComponent
+    ProductsComponent,
+    FoodListComponent,
+    BmiCalculatorComponent
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
+    NgOptimizedImage, HttpClientModule, ReactiveFormsModule
+    NgOptimizedImage,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
