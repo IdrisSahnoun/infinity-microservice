@@ -2,7 +2,7 @@
 services:
   eureka:
     build: ./eureka
-    image:  amenizoubeir/backend-eureka:latest
+    image:  eureka/backend-eureka:latest
     container_name: eureka-server
     ports:
       - "8761:8761"
@@ -11,10 +11,22 @@ services:
 
   gateway:
     build: ./gateway
-    image:  amenizoubeir/backend-gateway:latest
+    image:  gateway/backend-gateway:latest
     container_name: gateway-service
     ports:
       - "8088:8088"
+    depends_on:
+      - eureka
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka/
+    networks:
+      - microservices-network
+  config-server:
+    build: ./config-server
+    image: configserver/config-server:latest
+    container_name: config-server
+    ports:
+      - "8888:8888"
     depends_on:
       - eureka
     environment:
@@ -92,7 +104,7 @@ services:
     networks:
       - microservices-network
 
-microservice4-service:
+  microservice4-service:
     build: ./microservice4
     image:  nessimayadi/backend-microservice4-service:latest
     container_name: microservice4-nessim-service
