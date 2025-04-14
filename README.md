@@ -1,175 +1,152 @@
-# Infinity Microservices Project
 
-## Project Overview
-This project is a microservices-based application that implements a comprehensive system for managing various aspects of sports and competitions. The architecture follows modern microservices patterns and includes multiple specialized services working together.
+# 🏋️ Microservice - Gestion des Plans d'Entraînement
 
-## Architecture
+![Build](https://img.shields.io/badge/build-passing-brightgreen) 
+![License](https://img.shields.io/badge/license-MIT-blue)
 
-### Backend Services
+Ce microservice fait partie d'une architecture distribuée et gère uniquement les **plans d'entraînement**.  
+Il permet la création, la modification, la suppression et la consultation des plans.  
+Une interface Angular permet de manipuler les données côté front-office et back-office.
 
-1. **Service Discovery (Eureka Server)**
-   - Port: 8761
-   - Role: Service registration and discovery
-   - Location: `backend/eureka`
+---
 
-2. **API Gateway**
-   - Port: 8088
-   - Role: Central entry point for all API requests
-   - Location: `backend/gateway`
+## 📚 Table des Matières
+- [Présentation](#présentation)
+- [Fonctionnalités](#fonctionnalités)
+- [Technologies Utilisées](#technologies-utilisées)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Endpoints API](#endpoints-api)
+- [Tests](#tests)
+- [Contributions](#contributions)
+- [Licence](#licence)
 
-3. **Config Server**
-   - Port: 8888
-   - Role: Centralized configuration management
-   - Location: `backend/config-server`
+---
 
-4. **Microservices**
-   - **Competition Service** (`backend/microservice`)
-     - Port: 8082
-     - Manages competitions and tournaments
-   
-   - **Sports Management Service** (`backend/microservice1`)
-     - Port: 8081
-     - Handles sports and sports facilities management
-   
-   - **User Service** (`backend/user-microservice`)
-     - Manages user accounts and authentication
-   
-   - **Additional Services** (`backend/microservice2`, `backend/microservice3`, `backend/microservice4`, `backend/microservice5`)
-     - Various specialized services for different functionalities
+## 🧾 Présentation
 
-### Frontend
-- Location: `frontend/`
-- Modern web application for user interaction
+Ce microservice permet de :
+- Gérer les plans d'entraînement (titre, description, durée, état actif/inactif).
+- Trier, filtrer et rechercher des plans.
+- Accéder à des statistiques (nombre total, durée moyenne, min, max).
 
-## Prerequisites
+---
 
-- Java 17 or higher
-- Maven 3.6 or higher
-- MySQL 8.0 or higher
-- Docker and Docker Compose
-- Node.js and npm (for frontend)
+## ⚙️ Fonctionnalités
 
-## Deployment Steps
+### ✅ Gestion des Plans d'Entraînement
+- Ajouter, modifier, supprimer, activer/désactiver un plan.
+- Affichage sous forme de tableau avec tri et recherche.
+- Statistiques dynamiques calculées côté backend.
 
-### 1. Database Setup
+---
+
+## 🧰 Technologies Utilisées
+
+### Back-End
+- **Langage** : Java 17  
+- **Framework** : Spring Boot  
+- **Base de Données** : MySQL / H2 (tests)  
+- **Documentation API** : Swagger/OpenAPI  
+- **Tests** : JUnit, Mockito, MockMvc  
+- **Communication** : REST  
+
+### Front-End
+- **Framework** : Angular  
+- **Outils** : NgModel, HttpClient, Component Services  
+- **Style** : SCSS
+
+---
+
+## 🚀 Installation
+
+### Prérequis
+- JDK 17 ou supérieur  
+- Maven 3.x  
+- MySQL  
+- Node.js + Angular CLI  
+- Un IDE (IntelliJ IDEA, VS Code…)
+
+### Lancer le Back-End
 ```bash
-# Start MySQL container
-docker run --name mysql -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mysql:8.0
-```
-
-### 2. Build and Deploy Services
-
-#### Option 1: Docker Compose Deployment
-```bash
-# Navigate to backend directory
-cd backend
-
-# Build and start all services
-docker-compose up --build
-```
-
-#### Option 2: Manual Deployment
-
-1. **Start Eureka Server**
-```bash
-cd backend/eureka
+git clone https://github.com/ton-username/microservice-plans.git
+cd microservice-plans
 mvn spring-boot:run
 ```
 
-2. **Start Config Server**
+### Lancer le Front-End
 ```bash
-cd backend/config-server
-mvn spring-boot:run
-```
-
-3. **Start API Gateway**
-```bash
-cd backend/gateway
-mvn spring-boot:run
-```
-
-4. **Start Individual Microservices**
-```bash
-# For each microservice
-cd backend/[microservice-name]
-mvn spring-boot:run
-```
-
-### 3. Frontend Deployment
-```bash
-cd frontend
+cd front-office
 npm install
-npm start
+ng serve
 ```
 
-## Service Ports
+---
 
-| Service | Port |
-|---------|------|
-| Eureka Server | 8761 |
-| Config Server | 8888 |
-| API Gateway | 8088 |
-| Competition Service | 8082 |
-| Sports Management Service | 8081 |
-| Microservice2 | 8082 |
-| Microservice3 | 8090 |
-| Microservice5 | 8085 |
+## ⚙️ Configuration
 
-## Development Guidelines
+### Exemple de `application.properties`
+```properties
+# Application
+spring.application.name=microservice-plans
+server.servlet.context-path=/plans
+server.port=8084
 
-### Code Structure
-- Each microservice follows a standard Spring Boot structure
-- Common patterns:
-  - Controller layer for API endpoints
-  - Service layer for business logic
-  - Repository layer for data access
-  - Entity classes for data models
+# Base de données
+spring.datasource.url=jdbc:mysql://localhost:3306/plans?createDatabaseIfNotExist=true&serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=
 
-### Best Practices
-1. Follow RESTful API design principles
-2. Implement proper error handling
-3. Use appropriate HTTP status codes
-4. Document all API endpoints
-5. Write unit and integration tests
-6. Follow microservices design patterns
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
 
-## Testing
+# (facultatif) Eureka
+eureka.client.service-url.defaultZone=http://localhost:8761/eureka
+eureka.client.register-with-eureka=true
+```
 
-### Unit Tests
+---
+
+## 📡 Endpoints API
+
+| Méthode | Endpoint | Description |
+|--------|----------|-------------|
+| GET    | `/plans/api/plans` | Récupérer tous les plans |
+| POST   | `/plans/api/plans` | Créer un nouveau plan |
+| PUT    | `/plans/api/plans/{id}` | Mettre à jour un plan |
+| DELETE | `/plans/api/plans/{id}` | Supprimer un plan |
+| PATCH  | `/plans/api/plans/{id}/toggle-actif` | Activer / désactiver un plan |
+| GET    | `/plans/api/plans/search?keyword=xxx` | Rechercher par mot-clé |
+| GET    | `/plans/api/plans/sort?sortBy=titre|duree` | Trier par champ |
+| GET    | `/plans/api/plans/stats` | Obtenir les statistiques |
+
+---
+
+## ✅ Tests
+
+Tests réalisés avec :
+- **JUnit 5**
+- **Mockito**
+- **MockMvc**
+
+### Lancer les tests
 ```bash
-# For each microservice
-cd backend/[microservice-name]
 mvn test
 ```
 
-### Integration Tests
-```bash
-# Run integration tests
-mvn verify
-```
+---
 
-## Monitoring and Logging
+## 🤝 Contributions
 
-- Each service exposes health endpoints
-- Centralized logging through Eureka
-- API Gateway provides request tracing
+Les contributions sont les bienvenues !  
+Vous pouvez :
+- Proposer une amélioration ✨
+- Signaler un bug 🐛
+- Soumettre une Pull Request 🚀
 
-## Troubleshooting
+---
 
-1. **Service Registration Issues**
-   - Check Eureka server status
-   - Verify service configuration
-   - Check network connectivity
+## 📄 Licence
 
-2. **Configuration Issues**
-   - Verify Config Server is running
-   - Check property files
-   - Validate environment variables
-
-3. **Database Connection Issues**
-   - Verify MySQL is running
-   - Check connection strings
-   - Validate credentials
-
-
-## Contributing
+Ce projet est sous licence **MIT**.  
+Consultez le fichier `LICENSE` pour plus d’informations.
