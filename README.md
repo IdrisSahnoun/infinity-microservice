@@ -1,175 +1,186 @@
-# Infinity Microservices Project
+# Microservice1 - Gestion des Sports et Salles de Sport
 
-## Project Overview
-This project is a microservices-based application that implements a comprehensive system for managing various aspects of sports and competitions. The architecture follows modern microservices patterns and includes multiple specialized services working together.
+## Description
+Microservice1 est un service Spring Boot qui gère la gestion des sports et des salles de sport, ainsi que leurs relations. Il fait partie d'une architecture microservices plus large et utilise Spring Cloud Config pour sa configuration.
 
-## Architecture
+## Fonctionnalités
+- Gestion CRUD des sports
+- Gestion CRUD des salles de sport
+- Gestion des relations entre sports et salles de sport
+- Configuration centralisée via Spring Cloud Config
+- Monitoring via les endpoints de santé
+- Statistiques et analyses avancées
+- Système de recommandation personnalisé
 
-### Backend Services
+## Prérequis
+- Java 17 ou supérieur
+- Maven 3.6 ou supérieur
+- Spring Boot 3.x
+- Base de données (configurée via le serveur de configuration)
+- Serveur de configuration Spring Cloud Config (port 8888)
+- Serveur Eureka (port 8761)
 
-1. **Service Discovery (Eureka Server)**
-   - Port: 8761
-   - Role: Service registration and discovery
-   - Location: `backend/eureka`
-
-2. **API Gateway**
-   - Port: 8088
-   - Role: Central entry point for all API requests
-   - Location: `backend/gateway`
-
-3. **Config Server**
-   - Port: 8888
-   - Role: Centralized configuration management
-   - Location: `backend/config-server`
-
-4. **Microservices**
-   - **Competition Service** (`backend/microservice`)
-     - Port: 8082
-     - Manages competitions and tournaments
-   
-   - **Sports Management Service** (`backend/microservice1`)
-     - Port: 8081
-     - Handles sports and sports facilities management
-   
-   - **User Service** (`backend/user-microservice`)
-     - Manages user accounts and authentication
-   
-   - **Additional Services** (`backend/microservice2`, `backend/microservice3`, `backend/microservice4`, `backend/microservice5`)
-     - Various specialized services for different functionalities
-
-### Frontend
-- Location: `frontend/`
-- Modern web application for user interaction
-
-## Prerequisites
-
-- Java 17 or higher
-- Maven 3.6 or higher
-- MySQL 8.0 or higher
-- Docker and Docker Compose
-- Node.js and npm (for frontend)
-
-## Deployment Steps
-
-### 1. Database Setup
-```bash
-# Start MySQL container
-docker run --name mysql -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mysql:8.0
+## Structure du Projet
+```
+microservice1/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── tn/esprit/microservice1/
+│   │   │       ├── controllers/
+│   │   │       │   ├── SportController.java
+│   │   │       │   ├── SalleDeSportController.java
+│   │   │       │   └── StatistiqueController.java
+│   │   │       ├── entities/
+│   │   │       │   ├── Sport.java
+│   │   │       │   └── SalleDeSport.java
+│   │   │       ├── repositories/
+│   │   │       │   ├── SportRepository.java
+│   │   │       │   └── SalleDeSportRepository.java
+│   │   │       ├── services/
+│   │   │       │   ├── SportService.java
+│   │   │       │   ├── SalleDeSportService.java
+│   │   │       │   └── StatistiqueService.java
+│   │   │       └── Microservice1Application.java
+│   │   └── resources/
+│   │       └── application.properties
+└── pom.xml
 ```
 
-### 2. Build and Deploy Services
+## API Endpoints
 
-#### Option 1: Docker Compose Deployment
-```bash
-# Navigate to backend directory
-cd backend
+### Sports (`/api/sports`)
+- `GET /api/sports` - Liste tous les sports
+- `GET /api/sports/{id}` - Récupère un sport par ID
+- `POST /api/sports` - Crée un nouveau sport
+- `PUT /api/sports/{id}` - Met à jour un sport
+- `DELETE /api/sports/{id}` - Supprime un sport
+- `POST /api/sports/{sportId}/salles/{salleId}` - Associe un sport à une salle
+- `DELETE /api/sports/{sportId}/salles/{salleId}` - Supprime l'association entre un sport et une salle
+- `GET /api/sports/{sportId}/salles` - Récupère les salles associées à un sport
 
-# Build and start all services
-docker-compose up --build
+### Salles de Sport (`/api/salles`)
+- `GET /api/salles` - Liste toutes les salles de sport
+- `GET /api/salles/{id}` - Récupère une salle par ID
+- `POST /api/salles` - Crée une nouvelle salle
+- `PUT /api/salles/{id}` - Met à jour une salle
+- `DELETE /api/salles/{id}` - Supprime une salle
+
+### Statistiques et Analyses (`/api/statistiques`)
+- `GET /api/statistiques/salles` - Statistiques générales des salles
+  ```json
+  {
+      "nombreTotalSalles": 10,
+      "moyenneCapacite": 50,
+      "moyennePrixAbonnement": 150.0,
+      "topSports": [
+          {"nom": "Yoga", "nombreSalles": 8},
+          {"nom": "Fitness", "nombreSalles": 6}
+      ]
+  }
+  ```
+
+- `GET /api/statistiques/recommandations?ville={ville}&prixMax={prix}&sportsPreferes={sports}` - Recommandations personnalisées
+  - Paramètres :
+    - ville : Ville de recherche (ex: "Tunis")
+    - prixMax : Budget maximum (ex: 200)
+    - sportsPreferes : Liste des sports préférés (ex: "Yoga,Fitness")
+
+- `GET /api/statistiques/tendances` - Tendances des sports par ville
+  ```json
+  {
+      "Tunis": [
+          {"nom": "Yoga", "nombreSalles": 5},
+          {"nom": "Fitness", "nombreSalles": 4}
+      ],
+      "Sousse": [
+          {"nom": "Natation", "nombreSalles": 3},
+          {"nom": "Tennis", "nombreSalles": 2}
+      ]
+  }
+  ```
+
+## Configuration
+Le service utilise Spring Cloud Config pour sa configuration. Les propriétés principales sont définies dans `application.properties`:
+
+```properties
+spring.application.name=microservice1
+server.port=8081
+
+#configServer
+spring.cloud.config.enabled=true
+spring.config.import=optional:configserver:http://localhost:8888
+
+management.endpoints.web.exposure.include=refresh,health,info
+
+# Eureka registration
+eureka.client.service-url.defaultZone=http://localhost:8761/eureka
+eureka.client.register-with-eureka=true
 ```
 
-#### Option 2: Manual Deployment
+## Installation et Exécution
 
-1. **Start Eureka Server**
+1. Clonez le repository
+2. Assurez-vous que le serveur de configuration est en cours d'exécution sur le port 8888
+3. Assurez-vous que le serveur Eureka est en cours d'exécution sur le port 8761
+4. Exécutez les commandes suivantes :
+
 ```bash
-cd backend/eureka
+# Compilation
+mvn clean install
+
+# Exécution
 mvn spring-boot:run
 ```
 
-2. **Start Config Server**
+## Tests
+Pour exécuter les tests :
+
 ```bash
-cd backend/config-server
-mvn spring-boot:run
-```
-
-3. **Start API Gateway**
-```bash
-cd backend/gateway
-mvn spring-boot:run
-```
-
-4. **Start Individual Microservices**
-```bash
-# For each microservice
-cd backend/[microservice-name]
-mvn spring-boot:run
-```
-
-### 3. Frontend Deployment
-```bash
-cd frontend
-npm install
-npm start
-```
-
-## Service Ports
-
-| Service | Port |
-|---------|------|
-| Eureka Server | 8761 |
-| Config Server | 8888 |
-| API Gateway | 8088 |
-| Competition Service | 8082 |
-| Sports Management Service | 8081 |
-| Microservice2 | 8082 |
-| Microservice3 | 8090 |
-| Microservice5 | 8085 |
-
-## Development Guidelines
-
-### Code Structure
-- Each microservice follows a standard Spring Boot structure
-- Common patterns:
-  - Controller layer for API endpoints
-  - Service layer for business logic
-  - Repository layer for data access
-  - Entity classes for data models
-
-### Best Practices
-1. Follow RESTful API design principles
-2. Implement proper error handling
-3. Use appropriate HTTP status codes
-4. Document all API endpoints
-5. Write unit and integration tests
-6. Follow microservices design patterns
-
-## Testing
-
-### Unit Tests
-```bash
-# For each microservice
-cd backend/[microservice-name]
 mvn test
 ```
 
-### Integration Tests
-```bash
-# Run integration tests
-mvn verify
+## Monitoring
+Le service expose les endpoints suivants pour le monitoring :
+- `/actuator/health` - État de santé du service
+- `/actuator/info` - Informations sur le service
+- `/actuator/refresh` - Rafraîchissement de la configuration
+
+## Dépendances Principales
+```xml
+<dependencies>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-config</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <optional>true</optional>
+    </dependency>
+</dependencies>
 ```
 
-## Monitoring and Logging
+## Contribution
+1. Fork le projet
+2. Créez une branche pour votre fonctionnalité (`git checkout -b feature/AmazingFeature`)
+3. Committez vos changements (`git commit -m 'Add some AmazingFeature'`)
+4. Push vers la branche (`git push origin feature/AmazingFeature`)
+5. Ouvrez une Pull Request
 
-- Each service exposes health endpoints
-- Centralized logging through Eureka
-- API Gateway provides request tracing
-
-## Troubleshooting
-
-1. **Service Registration Issues**
-   - Check Eureka server status
-   - Verify service configuration
-   - Check network connectivity
-
-2. **Configuration Issues**
-   - Verify Config Server is running
-   - Check property files
-   - Validate environment variables
-
-3. **Database Connection Issues**
-   - Verify MySQL is running
-   - Check connection strings
-   - Validate credentials
-
-
-## Contributing
