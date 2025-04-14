@@ -16,10 +16,12 @@ import { ContactComponent } from './contact/contact.component';
 import { StatistiquesDashboardComponent } from './mic1/statistiques/dashboard/statistiques-dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductsComponent } from './mic2/products/products.component';
-import {HttpClientModule} from "@angular/common/http";
 import { FoodListComponent } from './mic3/food-list/food-list.component';
 import { BmiCalculatorComponent } from './mic3/bmi-calculator/bmi-calculator.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { AbonnementComponent } from './mic5/abonnement/abonnement.component'; // Correct import statement
+import { FormsModule } from '@angular/forms'; // Importez FormsModule
+
 
 
 @NgModule({
@@ -35,18 +37,20 @@ import {ReactiveFormsModule} from "@angular/forms";
     TestimonialComponent,
     NotfoundComponent,
     ContactComponent,
-    StatistiquesDashboardComponent
-    ProductsComponent,
+    StatistiquesDashboardComponent,
+    ProductsComponent, // Gardez une seule déclaration
     FoodListComponent,
-    BmiCalculatorComponent
-    ProductsComponent
+    BmiCalculatorComponent,
+    AbonnementComponent, // Déclaration correcte
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
-    NgOptimizedImage, HttpClientModule, ReactiveFormsModule
-    NgOptimizedImage,HttpClientModule
+    HttpClientModule,
+    NgOptimizedImage, HttpClientModule, ReactiveFormsModule,  
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
